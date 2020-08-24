@@ -290,11 +290,11 @@ textarea.input2+.focus-input2::after {
 }
 
 .has-val.input2+.focus-input2::after {
-    top: -13px;
+    top: -13px !important;
 }
 
 .has-val.input2+.focus-input2::before {
-    width: 100%;
+    width: 100% !important;
 }
 
 
