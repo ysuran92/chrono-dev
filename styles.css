@@ -29,6 +29,7 @@
     }
     
     .welcome {
+        font-family: 'Alata', sans-serif;
         border-radius: 1em;
         padding: 1em;
         position: absolute;
@@ -40,7 +41,6 @@
         color: white;
         text-shadow: 2px 1px 1px #000;
         font-size: 15pt;
-        font-family: 'Alata', sans-serif;
     }
     
     .sectionTitle,
