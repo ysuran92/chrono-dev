@@ -164,7 +164,9 @@
         font-family: 'Montserrat', sans-serif;
     }
     
+    .fa-gitlab,
     .fa-twitter,
-    .fa-linkedin {
+    .fa-linkedin-in,
+    .fa-github {
         color: black;
     }
