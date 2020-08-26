@@ -14,11 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
     <link rel="stylesheet" id="font-awesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css?ver=4.9.4" type="text/css" media="all">
     <link rel="stylesheet" href="cards.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="text/javascript" src="fullpage.js"></script>
     <script src="modernizr-custom.js" type="text/javascript"></script>
+    <script src="fullpage.extensions.min.js"></script>
 
     <title>Chrono Dev</title>
 </head>
@@ -48,8 +50,27 @@
         <h1 class="titleFront">CHRONO DEV</h1>
         <p class="welcome">Welcome. We are the team of software developers you can rely on. Let's build something!
         </p>
-        <div class="section section2" data-anchor="page2">
+        <div class="section section2 fourth" data-anchor="page2">
             <h1 class="sectionTitle2">About Us</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="aboutUsP">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget egestas turpis. Maecenas ut odio nec sem eleifend venenatis a rhoncus justo. Pellentesque purus elit, facilisis eget viverra id, tincidunt id urna. Fusce egestas interdum metus eu
+                            blandit. Quisque fringilla porttitor felis nec laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam suscipit massa et imperdiet aliquet. Suspendisse finibus rutrum suscipit.
+                            Aenean dolor magna, fringilla et urna eu, condimentum consequat odio. Nullam sit amet mi non nisi molestie accumsan. Sed sit amet vestibulum quam. Sed sed dui mi.
+                        </p>
+                        <p class="aboutUsP">
+                            Etiam vel blandit tortor. Aliquam vel pharetra massa. Donec commodo augue tellus, vitae condimentum nisl posuere id. Praesent id libero ut turpis accumsan auctor at a tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                            himenaeos. In lobortis venenatis leo tempor facilisis. Sed dui velit, pretium in varius in, viverra et nibh. Suspendisse fermentum metus id interdum facilisis. Integer tempor erat rhoncus quam laoreet faucibus. Nullam ut erat
+                            ut velit hendrerit gravida ac sit amet felis. Suspendisse quis nibh fermentum, molestie eros non, scelerisque erat.
+                        </p>
+                        <p class="aboutUsP">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="section section3" data-anchor="page3">
             <h1 class="sectionTitle">The Team</h1>
@@ -61,6 +82,12 @@
                             <label for="slider"></label>
                             <div class="wrapper">
                                 <div class="profile">
+                                    <div class="deviconDiv">
+                                        <i class="devicon-html5-plain-wordmark devI"></i>
+                                        <i class="devicon-css3-plain-wordmark devI"></i>
+                                        <i class="devicon-javascript-plain devI"></i>
+                                        <i class="devicon-react-original-wordmark devI"></i>
+                                    </div>
                                     <img src="assets/carlos.png" class="thumbnail">
                                     <div class="check"></div>
                                     <h3 class="name">Carlos</h3>
@@ -89,6 +116,12 @@
                             <label for="slider2"></label>
                             <div class="wrapper">
                                 <div class="profile">
+                                    <div class="deviconDiv">
+                                        <i class="devicon-csharp-plain"></i>
+                                        <i class="devicon-dot-net-plain-wordmark"></i>
+                                        <i class="devicon-react-original-wordmark devI"></i>
+                                        <i class="devicon-java-plain-wordmark"></i>
+                                    </div>
                                     <img src="assets/leo.png" class="thumbnail">
                                     <div class="check"></div>
                                     <h3 class="name">Leo</h3>
@@ -119,38 +152,38 @@
         <div class="section section4" data-anchor="page4">
             <h1 class="sectionTitle3">Contact Us</h1>
 
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 
+    <script>
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            scrollHorizontally: true
+        });
 
-            <script src="script.js"></script>
-            <script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        fullpage_api.setAllowScrolling(true);
+    </script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            <script>
-                new fullpage('#fullpage', {
-                    autoScrolling: true,
-                    scrollHorizontally: true
-                });
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-                fullpage_api.setAllowScrolling(true);
-            </script>
-
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-
-                gtag('config', 'UA-23581568-13');
-            </script>
+        gtag('config', 'UA-23581568-13');
+    </script>
 </body>
 
 </html>
