@@ -188,3 +188,17 @@
         margin-top: -40px;
         margin-bottom: 10px;
     }
+    
+    #aboutus1,
+    #aboutus2 {
+        position: relative;
+        top: 0rem;
+        left: -100rem;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+    }
+    
+    .fp-viewing-page2 #aboutus1,
+    .fp-viewing-page2 #aboutus2 {
+        left: -9rem;
+    }
