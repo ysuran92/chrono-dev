@@ -210,3 +210,16 @@
     .fp-viewing-page2 #aboutus2 {
         left: -9rem;
     }
+    
+    #kanban {
+        width: 30%;
+        position: relative;
+        left: 8rem;
+        bottom: -50rem;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+    }
+    
+    .fp-viewing-page4 #kanban {
+        bottom: -0.5rem;
+    }
