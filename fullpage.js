@@ -1,5 +1,5 @@
 /*!
- * fullPage 3.0.7
+ * fullPage 3.0.9
  * https://github.com/alvarotrigo/fullPage.js
  *
  * @license GPLv3 for open source use only
@@ -250,6 +250,7 @@
         var g_initialAnchorsInDom = false;
         var g_canFireMouseEnterNormalScroll = true;
         var g_mediaLoadedId;
+        var g_transitionLapseId;
         var extensions = [
             'parallax',
             'scrollOverflowReset',
@@ -586,7 +587,7 @@
 
         if(container){
             //public functions
-            FP.version = '3.0.5';
+            FP.version = '3.0.8';
             FP.setAutoScrolling = setAutoScrolling;
             FP.setRecordHistory = setRecordHistory;
             FP.setScrollingSpeed = setScrollingSpeed;
@@ -604,7 +605,7 @@
             FP.fitToSection = fitToSection;
             FP.reBuild = reBuild;
             FP.setResponsive = setResponsive;
-            FP.getFullpageData = function(){ return options };
+            FP.getFullpageData = function(){ return options; };
             FP.destroy = destroy;
             FP.getActiveSection = getActiveSection;
             FP.getActiveSlide = getActiveSlide;
@@ -690,6 +691,9 @@
             //detecting any change on the URL to scroll to the given anchor link
             //(a way to detect back history button as we play with the hashes on the URL)
             window.addEventListener('hashchange', hashChangeHandler);
+            
+            // on window focus
+            window.addEventListener('focus', focusHandler);
 
             //when opening a new tab (ctrl + t), `control` won't be pressed when coming back.
             window.addEventListener('blur', blurHandler);
@@ -751,15 +755,20 @@
         }
 
         function onMouseEnterOrLeave(e) {
-            //onMouseLeave will use the destination target, not the one we are moving away from
-            var target = event.toElement || e.relatedTarget || e.target;
-
             var type = e.type;
             var isInsideOneNormalScroll = false;
+            var isUsingScrollOverflow = options.scrollOverflow;
+
+            //onMouseLeave will use the destination target, not the one we are moving away from
+            var target = type === 'mouseleave' ? e.toElement || e.relatedTarget : e.target;
 
             //coming from closing a normalScrollElements modal or moving outside viewport?
             if(target == document || !target){
                 setMouseHijack(true);
+
+                if(isUsingScrollOverflow){
+                    options.scrollOverflowHandler.setIscroll(target, true);
+                }
                 return;
             }
 
@@ -788,6 +797,10 @@
                     if(isNormalScrollTarget || isNormalScrollChildFocused){
                         if(!FP.shared.isNormalScrollElement){
                             setMouseHijack(false);
+
+                            if(isUsingScrollOverflow){
+                                options.scrollOverflowHandler.setIscroll(target, false);
+                            }
                         }
                         FP.shared.isNormalScrollElement = true;
                         isInsideOneNormalScroll = true;
@@ -798,6 +811,11 @@
             //not inside a single normal scroll element anymore?
             if(!isInsideOneNormalScroll && FP.shared.isNormalScrollElement){
                 setMouseHijack(true);
+                
+                if(isUsingScrollOverflow){
+                    options.scrollOverflowHandler.setIscroll(target, true);
+                }
+
                 FP.shared.isNormalScrollElement = false;
             }
         }
@@ -833,9 +851,9 @@
 
             //no anchors option? Checking for them in the DOM attributes
             if(!options.anchors.length){
-                var attrName = '[data-anchor]';
-                var anchors = $(options.sectionSelector.split(',').join(attrName + ',') + attrName, container);
-                if(anchors.length){
+                var anchorsAttribute = '[data-anchor]';
+                var anchors = $(options.sectionSelector.split(',').join(anchorsAttribute + ',') + anchorsAttribute, container);
+                if(anchors.length && anchors.length === $(SECTION_SEL).length){
                     g_initialAnchorsInDom = true;
                     anchors.forEach(function(item){
                         options.anchors.push(item.getAttribute('data-anchor').toString());
@@ -845,8 +863,8 @@
 
             //no tooltips option? Checking for them in the DOM attributes
             if(!options.navigationTooltips.length){
-                var attrName = '[data-tooltip]';
-                var tooltips = $(options.sectionSelector.split(',').join(attrName + ',') + attrName, container);
+                var tooltipsAttribute = '[data-tooltip]';
+                var tooltips = $(options.sectionSelector.split(',').join(tooltipsAttribute + ',') + tooltipsAttribute, container);
                 if(tooltips.length){
                     tooltips.forEach(function(item){
                         options.navigationTooltips.push(item.getAttribute('data-tooltip').toString());
@@ -1078,10 +1096,7 @@
                 li += '</li>';
             }
             $('ul', nav)[0].innerHTML = li;
-
-            //centering it vertically
-            css($(SECTION_NAV_SEL), {'margin-top': '-' + ($(SECTION_NAV_SEL)[0].offsetHeight/2) + 'px'});
-
+            
             //activating the current active section
 
             var bullet = $('li', $(SECTION_NAV_SEL)[0])[index($(SECTION_ACTIVE_SEL)[0], SECTION_SEL)];
@@ -1091,10 +1106,11 @@
         /**
         * Gets the name for screen readers for a section/slide navigation bullet.
         */
-        function getBulletLinkName(i, defaultName){
+        function getBulletLinkName(i, defaultName, item){
+            var anchor = defaultName === 'Section' ? options.anchors[i] : item.getAttribute('data-anchor');
             return options.navigationTooltips[i]
-                || options.anchors[i]
-                || defaultName + ' ' + (i+1)
+                || anchor
+                || defaultName + ' ' + (i+1);
         }
 
         /*
@@ -1172,6 +1188,10 @@
         function scrollHandler(){
             var currentSection;
 
+            if(isResizing){
+                return;
+            }
+            
             if(!options.autoScrolling || options.scrollBar){
                 var currentScroll = getScrollTop();
                 var scrollDirection = getScrollDirection(currentScroll);
@@ -1848,6 +1868,9 @@
         * Performs the vertical movement (by CSS3 or by jQuery)
         */
         function performMovement(v){
+            var isFastSpeed = options.scrollingSpeed < 700;
+            var transitionLapse = isFastSpeed ? 700 : options.scrollingSpeed; 
+
             // using CSS3 translate functionality
             if (options.css3 && options.autoScrolling && !options.scrollBar) {
 
@@ -1862,7 +1885,10 @@
                     clearTimeout(afterSectionLoadsId);
                     afterSectionLoadsId = setTimeout(function () {
                         afterSectionLoads(v);
-                    }, options.scrollingSpeed);
+
+                        //disabling canScroll when using fastSpeed
+                        canScroll = !isFastSpeed;
+                    }, options.scrollingSpeed);                   
                 }else{
                     afterSectionLoads(v);
                 }
@@ -1886,9 +1912,21 @@
                             afterSectionLoads(v);
                         },30);
                     }else{
+                        
                         afterSectionLoads(v);
+
+                        //disabling canScroll when using fastSpeed
+                        canScroll = !isFastSpeed;
                     }
                 });
+            }
+
+            // enabling canScroll after the minimum transition laps
+            if(isFastSpeed){
+                clearTimeout(g_transitionLapseId);
+                g_transitionLapseId = setTimeout(function(){
+                    canScroll = true;
+                }, transitionLapse);
             }
         }
 
@@ -2052,7 +2090,7 @@
                         elementToPlay.load();
                         elementToPlay.onloadeddata = function(){
                             onMediaLoad(destiny);
-                        }
+                        };
                     }
                 }
             });
@@ -2066,7 +2104,9 @@
             if(options.scrollOverflow){
                 clearTimeout(g_mediaLoadedId);
                 g_mediaLoadedId = setTimeout(function(){
-                    scrollBarHandler.createScrollBar(section);
+                    if(!hasClass($body, RESPONSIVE)){
+                        scrollBarHandler.createScrollBar(section);
+                    }
                 }, 200);
             }
         }
@@ -2353,6 +2393,11 @@
                 }
             }
         }
+        
+        // changing isWindowFocused to true on focus event
+        function focusHandler(){
+            isWindowFocused = true;
+        }
 
         //when opening a new tab (ctrl + t), `control` won't be pressed when coming back.
         function blurHandler(){
@@ -2384,6 +2429,7 @@
         function menuItemsHandler(e){
             if($(options.menu)[0] && (options.lockAnchors || !options.anchors.length)){
                 preventDefault(e);
+                /*jshint validthis:true */
                 moveTo(this.getAttribute('data-menuanchor'));
             }
         }
@@ -2620,6 +2666,8 @@
         * Resize event handler.
         */        
         function resizeHandler(){
+            isResizing = true;
+ 
             clearTimeout(resizeId);
 
             //in order to call the functions only when the resize is finished
@@ -2886,7 +2934,8 @@
             addClass(nav, 'fp-' + options.slidesNavPosition);
 
             for(var i=0; i< numSlides; i++){
-                appendTo(createElementFromHTML('<li><a href="#"><span class="fp-sr-only">'+ getBulletLinkName(i, 'Slide') +'</span><span></span></a></li>'), $('ul', nav)[0] );
+                var slide = $(SLIDE_SEL, section)[i];
+                appendTo(createElementFromHTML('<li><a href="#"><span class="fp-sr-only">'+ getBulletLinkName(i, 'Slide', slide) +'</span><span></span></a></li>'), $('ul', nav)[0] );
             }
 
             //centering it
@@ -3013,7 +3062,7 @@
                 };
 
             //preventing the style p:empty{display: none;} from returning the wrong result
-            el.style.display = 'block'
+            el.style.display = 'block';
 
             // Add it to the body to get the computed style.
             document.body.insertBefore(el, null);
@@ -3257,7 +3306,8 @@
                 scrollId,
                 scrollId2,
                 g_doubleCheckHeightId,
-                resizeHandlerId
+                resizeHandlerId,
+                g_transitionLapseId
             ].forEach(function(timeoutId){
                 clearTimeout(timeoutId);
             });
@@ -3399,7 +3449,7 @@
         */
         function displayWarnings(){
             var l = options['li' + 'c' + 'enseK' + 'e' + 'y'];
-            var msgStyle = 'font-size: 15px;background:yellow;'
+            var msgStyle = 'font-size: 15px;background:yellow;';
 
             if(!isOK){
                 showError('error', 'Fullpage.js version 3 has changed its license to GPLv3 and it requires a `licenseKey` option. Read about it here:');
@@ -3597,7 +3647,7 @@
     }
 
     /**
-    * Equivalent or jQuery function $().
+    * Equivalent of jQuery function $().
     */
     function $(selector, context){
         context = arguments.length > 1 ? context : document;
@@ -4180,7 +4230,7 @@ if(window.jQuery && window.fullpage){
 
         $.fn.fullpage = function(options) {
             options = $.extend({}, options, {'$': $});
-            new fullpage(this[0], options);
+            var instance = new fullpage(this[0], options);
         };
     })(window.jQuery, window.fullpage);
 }
