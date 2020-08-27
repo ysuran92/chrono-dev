@@ -10,6 +10,7 @@
         z-index: 999;
         background-color: #000;
         opacity: 0.8;
+        text-align: center;
     }
     
     .navbarLinks {
