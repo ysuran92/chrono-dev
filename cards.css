@@ -24,8 +24,8 @@ body {
 
 .customSlider+label {
     position: relative;
-    top: 35px;
-    left: 15px;
+    top: 3rem;
+    left: 3.5rem;
     cursor: pointer;
 }
 
@@ -60,6 +60,7 @@ body {
     width: 34px;
     top: -87px;
     left: -19px;
+    background: #31394D;
     border-radius: 50%;
 }
 
