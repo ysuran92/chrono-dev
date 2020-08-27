@@ -189,13 +189,20 @@
         margin-bottom: 10px;
     }
     
-    #aboutus1,
-    #aboutus2 {
+    #aboutus1 {
         position: relative;
         top: 0rem;
         left: -100rem;
         transition: all 1s ease-out;
         -webkit-transition: all 1s ease-out;
+    }
+    
+    #aboutus2 {
+        position: relative;
+        top: 0rem;
+        left: -150rem;
+        transition: all 1.3s ease-out;
+        -webkit-transition: all 1.3s ease-out;
     }
     
     .fp-viewing-page2 #aboutus1,
