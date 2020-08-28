@@ -214,12 +214,24 @@
     #kanban {
         width: 30%;
         position: relative;
-        left: 8rem;
+        left: -10rem;
         bottom: -50rem;
         transition: all 1s ease-out;
         -webkit-transition: all 1s ease-out;
     }
     
-    .fp-viewing-page4 #kanban {
-        bottom: -0.5rem;
+    .wipP {
+        position: relative;
+        vertical-align: middle;
+        text-align: left;
+        left: -10rem;
+        font-size: 20pt;
+        bottom: -50rem;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+    }
+    
+    .fp-viewing-page4 #kanban,
+    .fp-viewing-page4 .wipP {
+        bottom: 0rem;
     }
