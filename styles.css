@@ -150,6 +150,11 @@
         background-size: cover;
     }
     
+    .section5 {
+        background-image: url(assets/mainLogo.jpg);
+        background-size: cover;
+    }
+    
     @media screen and (max-width: 1080px) {
         .column {
             width: 100%;
@@ -214,8 +219,7 @@
     #kanban {
         width: 30%;
         position: relative;
-        left: -10rem;
-        bottom: -50rem;
+        left: -100rem;
         transition: all 1s ease-out;
         -webkit-transition: all 1s ease-out;
     }
@@ -227,16 +231,32 @@
         font-size: 20pt;
         font-family: 'Alata', sans-serif;
         color: slategray;
-        left: -10rem;
-        bottom: -50rem;
+        left: -100rem;
         transition: all 1s ease-out;
         -webkit-transition: all 1s ease-out;
     }
     
     .fp-viewing-page4 #kanban {
-        bottom: 0rem;
+        left: -10rem;
     }
     
     .fp-viewing-page4 .wipP {
-        bottom: 0.6rem;
+        left: -10rem;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+    
+    .grid-item {
+        padding: 20px;
+        margin: 5rem;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #robo {
+        width: 12.5%;
     }
