@@ -37,7 +37,7 @@ function popUpCrono() {
     message.innerHTML = "This is a Crono message";
     popup.appendChild(message);
     popup.appendChild(cancel);
-    document.body.appendChild(popup);
+    document.getElementById("popupArea").appendChild(popup);
 }
 
 function popUpLucca() {
@@ -46,7 +46,7 @@ function popUpLucca() {
     message.innerHTML = "This is a Lucca message";
     popup.appendChild(message);
     popup.appendChild(cancel);
-    document.body.appendChild(popup);
+    document.getElementById("popupArea").appendChild(popup);
 }
 
 // End popup divs for page 5

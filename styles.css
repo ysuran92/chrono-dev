@@ -247,11 +247,11 @@
     .popupLucca {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 60%;
         transform: translate(-50%, -50%);
         margin: auto;
-        width: 30rem;
-        height: 20rem;
+        width: 70vw;
+        height: 75vh;
         font-family: verdana;
         font-size: 13px;
         background-color: rgb(240, 240, 240);
@@ -259,13 +259,17 @@
         z-index: 100000000000000000;
     }
     
+    .friendsDivs {
+        margin: 1rem;
+    }
+    
     .cancel {
         display: relative;
         cursor: pointer;
         margin: 0;
         float: right;
-        height: 10px;
-        width: 14px;
+        height: 3rem;
+        width: 3rem;
         padding: 0 0 5px 0;
         background-color: red;
         text-align: center;
