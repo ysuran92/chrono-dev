@@ -159,6 +159,12 @@
         color: black;
     }
     
+    .aboutUsDiv {
+        padding: 25rem;
+        position: absolute;
+        top: -3rem;
+    }
+    
     .aboutUsP {
         font-size: 14pt;
         color: black;
@@ -428,6 +434,11 @@
         #theTeam {
             position: absolute;
             padding-bottom: 50px;
+        }
+        .aboutUsDiv {
+            padding: 1rem;
+            position: absolute;
+            top: 10rem;
         }
         .aboutUsP {
             font-size: 11pt;
