@@ -306,6 +306,12 @@ body {
         margin-right: 3vw;
         margin-left: -3vw;
     }
+    .wrapper .social-icons {
+        display: flex;
+        margin-top: 0em;
+        padding-top: 0em;
+        justify-content: space-between;
+    }
     .wrapper .social-icons .icon {
         display: flex;
         align-items: center;
