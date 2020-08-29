@@ -256,7 +256,7 @@ body {
     transform: translate(150%);
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1280px) {
     .wrapper {
         display: flex;
         flex-wrap: wrap;
