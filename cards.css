@@ -260,11 +260,36 @@ body {
     .wrapper {
         display: flex;
         flex-wrap: wrap;
+        margin-top: -25vh;
+        width: 40vw;
+        height: 70vh;
     }
     .cardONE,
     .cardTWO {
         transform: translate(25%, 25%);
         display: flex;
         flex-direction: row;
+    }
+    .cardONE {
+        margin-right: 3vw;
+        margin-left: -3vw;
+    }
+    .wrapper .social-icons .icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 10px;
+        height: 10px;
+        padding: 0px 20px;
+    }
+    .wrapper .social-icons .icon a {
+        width: 35px;
+        height: 35px;
+        line-height: 20px;
+    }
+    .wrapper .social-icons .icon h4 {
+        font-size: 0em;
+        margin-top: 0em;
+        margin-bottom: 0em;
     }
 }

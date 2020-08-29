@@ -22,6 +22,8 @@
     }); // end DOM ready
 })(jQuery); // end jQuery
 
+// Popup divs for page 5
+
 let popup = document.createElement('div');
 let cancel = document.createElement('div');
 cancel.className = 'cancel';
@@ -46,3 +48,5 @@ function popUpLucca() {
     popup.appendChild(cancel);
     document.body.appendChild(popup);
 }
+
+// End popup divs for page 5
