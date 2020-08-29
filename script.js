@@ -27,7 +27,7 @@
 let popup = document.createElement('div');
 let cancel = document.createElement('div');
 cancel.className = 'cancel';
-cancel.innerHTML = 'close';
+cancel.innerHTML = 'X';
 cancel.onclick = function(e) { popup.parentNode.removeChild(popup) };
 let message = document.createElement('span');
 
