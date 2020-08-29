@@ -156,7 +156,7 @@
         <div class="section section5" data-anchor="page5">
             <div class="grid-container">
                 <div class="grid-item">
-                    <a href="#"><img src="assets/cronoBak.webp" alt="crono"></a>
+                    <a onclick="popUpCrono();"><img src="assets/cronoBak.webp" alt="crono"></a>
                 </div>
                 <div class="grid-item"></div>
                 <div class="grid-item">
@@ -190,12 +190,13 @@
     <script type="text/javascript" src="fullpage.js"></script>
     <script src="modernizr-custom.js" type="text/javascript"></script>
     <script src="fullpage.extensions.min.js" type="text/javascript"></script>
+    <script src="script.js"></script>
 
     <script>
         new fullpage('#fullpage', {
             autoScrolling: true,
             scrollHorizontally: true,
-            responsiveWidth: 1024,
+            responsiveWidth: 1280,
             afterResponsive: function(isResponsive) {
 
             }
