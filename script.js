@@ -40,7 +40,16 @@ function appendAny() {
 function popUpCrono() {
     popup.className = 'popupCrono';
     popup.id = 'popupCrono';
-    message.innerHTML = "This is a Crono message";
+    message.innerHTML = ` <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Crono </h1>
+            <img src="assets/Crono.webp" alt="crono">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 70 <br> MP: 8 <br> Evade: 8 <br> Hit: 8 <br> Magic: 5 <br> M.Def: 2 <br> Power: 5 <br> Stamina: 8 <br> Speed: 12
+        </div>
+    </div>
+</div> `;
     appendAny();
 }
 
