@@ -25,7 +25,7 @@ body {
 .customSlider+label {
     position: relative;
     top: 3rem;
-    left: 3.5rem;
+    left: -6.35rem;
     cursor: pointer;
 }
 

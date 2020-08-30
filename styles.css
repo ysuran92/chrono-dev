@@ -138,14 +138,6 @@
         background-image: url(assets/mainLogo.jpg);
     }
     
-    @media screen and (max-width: 1280px) {
-        .column {
-            width: 100vw;
-            display: block;
-            margin-bottom: 20px;
-        }
-    }
-    
     #carlosCard,
     #leoCard {
         font-size: 30pt !important;
@@ -218,6 +210,7 @@
         vertical-align: middle;
         text-align: left;
         font-size: 20pt;
+        top: -0.6rem;
         font-family: 'Alata', sans-serif;
         color: slategray;
         left: -100rem;
@@ -419,6 +412,11 @@
     }
     
     @media only screen and (max-width: 1280px) {
+        .column {
+            width: 100vw;
+            display: block;
+            margin-bottom: 20px;
+        }
         .nav-mobile {
             display: block;
         }
