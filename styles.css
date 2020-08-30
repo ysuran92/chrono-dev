@@ -261,9 +261,14 @@
         }
     }
     
+    @font-face {
+        font-family: chronoType;
+        src: url(fonts/ChronoType.ttf);
+    }
+    
     .popupCrono h1,
     .popupLucca h1 {
-        font-family: 'Montserrat', sans-serif;
+        font-family: chronoType;
         padding-left: 1rem;
         padding-top: 0.5rem;
         position: relative;
