@@ -31,22 +31,24 @@ cancel.innerHTML = 'X';
 cancel.onclick = function(e) { popup.parentNode.removeChild(popup) };
 let message = document.createElement('span');
 
+function appendAny() {
+    popup.appendChild(message);
+    popup.appendChild(cancel);
+    document.getElementById("popupArea").appendChild(popup);
+}
+
 function popUpCrono() {
     popup.className = 'popupCrono';
     popup.id = 'popupCrono';
     message.innerHTML = "This is a Crono message";
-    popup.appendChild(message);
-    popup.appendChild(cancel);
-    document.getElementById("popupArea").appendChild(popup);
+    appendAny();
 }
 
 function popUpLucca() {
     popup.className = 'popupLucca';
     popup.id = 'popupLucca';
     message.innerHTML = "This is a Lucca message";
-    popup.appendChild(message);
-    popup.appendChild(cancel);
-    document.getElementById("popupArea").appendChild(popup);
+    appendAny();
 }
 
 // End popup divs for page 5
