@@ -453,6 +453,7 @@
             position: relative;
             text-align: center;
             padding-bottom: 3rem;
+            margin: 0 auto;
         }
         #kanban {
             display: none;
