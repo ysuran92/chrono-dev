@@ -247,10 +247,16 @@
         background: url(assets/marlePopupBack.png);
     }
     
+    .popupRobo {
+        background: url(assets/roboPopupBack.jpg);
+        color: rgb(230, 230, 230);
+    }
+    
     .popupCrono,
     .popupLucca,
     .popupFrog,
-    .popupMarle {
+    .popupMarle,
+    .popupRobo {
         position: absolute;
         top: -25rem;
         left: 37vw;
@@ -267,6 +273,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+    
+    .popupRobo {
+        background-position-x: 75%;
     }
     
     @keyframes drop {
@@ -287,7 +297,8 @@
     .popupCrono h1,
     .popupLucca h1,
     .popupFrog h1,
-    .popupMarle h1 {
+    .popupMarle h1,
+    .popupRobo h1 {
         font-family: chronoType;
         padding-left: 1rem;
         padding-top: 0.5rem;
@@ -311,15 +322,14 @@
         width: 10.6rem;
     }
     
-    .popupFrog img {
+    .popupFrog img,
+    .popupMarle img,
+    .popupRobo img {
         width: 14rem;
     }
     
-    .popupMarle img {
-        width: 14rem;
-    }
-    
-    .popupFrog .popupDesc {
+    .popupFrog .popupDesc,
+    .popupRobo .popupDesc {
         text-shadow: 2px 2px black;
     }
     

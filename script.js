@@ -98,7 +98,24 @@ function popUpMarle() {
             <img src="assets/Marle.webp" alt="marle">
         </div>
         <div class="col-6 popupDesc">
-            HP: 80 <br> MP: 4 <br> Evade: 8 <br> Hit: 8 <br> Magic: 6 <br> M.Def: 3 <br> Power: 4 <br> Stamina: 8 <br> Speed: 11
+            HP: 65 <br> MP: 12 <br> Evade: 6 <br> Hit: 8 <br> Magic: 8 <br> M.Def: 8 <br> Power: 2 <br> Stamina: 6 <br> Speed: 8
+        </div>
+    </div>
+</div> `;
+    appendAny();
+}
+
+function popUpRobo() {
+    popup.className = 'popupRobo';
+    popup.id = 'popupRobo';
+    message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Robo </h1>
+            <img src="assets/Robo.webp" alt="robo">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 130 <br> MP: 6 <br> Evade: 7 <br> Hit: 7 <br> Magic: 3 <br> M.Def: 1 <br> Power: 7 <br> Stamina: 10 <br> Speed: 6
         </div>
     </div>
 </div> `;
