@@ -252,11 +252,23 @@
         color: rgb(230, 230, 230);
     }
     
+    .popupMagus {
+        background: url(assets/magusPopupBack.jpg);
+        color: rgb(230, 230, 230);
+    }
+    
+    .popupAyla {
+        background: url(assets/aylaPopupBack.jpg);
+        color: rgb(230, 230, 230);
+    }
+    
     .popupCrono,
     .popupLucca,
     .popupFrog,
     .popupMarle,
-    .popupRobo {
+    .popupRobo,
+    .popupMagus,
+    .popupAyla {
         position: absolute;
         top: -25rem;
         left: 37vw;
@@ -279,6 +291,11 @@
         background-position-x: 75%;
     }
     
+    .popupAyla {
+        background-size: 130%;
+        background-position: 5%;
+    }
+    
     @keyframes drop {
         0% {}
         70% {
@@ -298,7 +315,9 @@
     .popupLucca h1,
     .popupFrog h1,
     .popupMarle h1,
-    .popupRobo h1 {
+    .popupRobo h1,
+    .popupMagus h1,
+    .popupAyla h1 {
         font-family: chronoType;
         padding-left: 1rem;
         padding-top: 0.5rem;
@@ -310,8 +329,16 @@
         margin-bottom: 3rem;
     }
     
+    .popupMagus h1 {
+        margin-bottom: 2rem;
+    }
+    
     .popupMarle h1 {
         color: rgb(230, 230, 230);
+    }
+    
+    .popupAyla h1 {
+        color: black;
     }
     
     .popupCrono img {
@@ -328,14 +355,25 @@
         width: 14rem;
     }
     
+    .popupMagus img {
+        width: 15rem;
+    }
+    
+    .popupAyla img {
+        width: 11.5rem;
+    }
+    
     .popupFrog .popupDesc,
-    .popupRobo .popupDesc {
+    .popupRobo .popupDesc,
+    .popupMagus .popupDesc,
+    .popupAyla .popupDesc {
         text-shadow: 2px 2px black;
     }
     
     .popupCrono .popupDesc,
     .popupLucca .popupDesc,
-    .popupMarle .popupDesc {
+    .popupMarle .popupDesc,
+    {
         text-shadow: 1px 1px white;
     }
     

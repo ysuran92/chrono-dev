@@ -122,4 +122,38 @@ function popUpRobo() {
     appendAny();
 }
 
+function popUpMagus() {
+    popup.className = 'popupMagus';
+    popup.id = 'popupMagus';
+    message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Magus </h1>
+            <img src="assets/Magus.webp" alt="magus">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 110 <br> MP: 14 <br> Evade: 10 <br> Hit: 12 <br> Magic: 10 <br> M.Def: 9 <br> Power: 8 <br> Stamina: 7 <br> Speed: 12
+        </div>
+    </div>
+</div> `;
+    appendAny();
+}
+
+function popUpAyla() {
+    popup.className = 'popupAyla';
+    popup.id = 'popupAyla';
+    message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Ayla </h1>
+            <img src="assets/Ayla.png" alt="ayla">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 80 <br> MP: 4 <br> Evade: 12 <br> Hit: 10 <br> Magic: 3 <br> M.Def: 1 <br> Power: 10 <br> Stamina: 9 <br> Speed: 13
+        </div>
+    </div>
+</div> `;
+    appendAny();
+}
+
 // End popup divs for page 5
