@@ -233,17 +233,32 @@
     .popupCrono,
     .popupLucca {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: -25rem;
+        left: 37vw;
         margin: auto;
         width: 25vw;
         height: 50vh;
+        border-radius: 2rem;
         font-family: verdana;
         font-size: 13px;
         background-color: rgb(240, 240, 240);
         border: 2px solid grey;
         z-index: 1002;
+        animation: drop 0.5s ease forwards;
+        background: url(assets/cronoPopupBack.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    @keyframes drop {
+        0% {}
+        70% {
+            transform: translateY(43rem);
+        }
+        100% {
+            transform: translateY(40rem);
+        }
     }
     
     .popupCrono h1,
@@ -268,24 +283,26 @@
     }
     
     .cancel {
-        display: absolute;
+        display: relative;
         cursor: pointer;
         margin: 0;
         float: right;
         height: 3rem;
         width: 3rem;
         padding: 0;
-        background-color: rgba(211, 51, 51, 0.699);
+        background-color: rgba(116, 116, 116, 0.5);
         text-align: center;
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.75rem;
         color: white;
-        border-radius: 3px;
+        border-radius: 0.125rem;
+        border-bottom-right-radius: 2rem;
+        border: 0.125rem solid rgba(24, 24, 24, 0.5);
         z-index: 1003;
     }
     
     .cancel:hover {
-        background: rgb(255, 50, 50);
+        background: rgba(73, 73, 73, 0.473);
     }
     
     .fa-bars {
