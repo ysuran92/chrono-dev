@@ -449,6 +449,17 @@
         .fp-viewing-page2 #aboutus2 {
             left: 0rem;
         }
+        #theTeam {
+            position: relative;
+            text-align: center;
+            padding-bottom: 3rem;
+        }
+        #kanban {
+            display: none;
+        }
+        .fp-viewing-page4 .wipP {
+            left: 0rem;
+        }
         .popupCrono,
         .popupLucca {
             position: absolute;
