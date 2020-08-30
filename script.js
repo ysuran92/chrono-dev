@@ -57,7 +57,51 @@ function popUpCrono() {
 function popUpLucca() {
     popup.className = 'popupLucca';
     popup.id = 'popupLucca';
-    message.innerHTML = "This is a Lucca message";
+    message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Lucca </h1>
+            <img src="assets/Lucca.webp" alt="lucca">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 62 <br> MP: 12 <br> Evade: 7 <br> Hit: 8 <br> Magic: 8 <br> M.Def: 7 <br> Power: 2 <br> Stamina: 6 <br> Speed: 6
+        </div>
+    </div>
+</div> `;
+    appendAny();
+}
+
+function popUpFrog() {
+    popup.className = 'popupFrog';
+    popup.id = 'popupFrog';
+    message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Frog </h1>
+            <img src="assets/Frog.webp" alt="frog">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 80 <br> MP: 4 <br> Evade: 8 <br> Hit: 8 <br> Magic: 6 <br> M.Def: 3 <br> Power: 4 <br> Stamina: 8 <br> Speed: 11
+        </div>
+    </div>
+</div> `;
+    appendAny();
+}
+
+function popUpMarle() {
+    popup.className = 'popupMarle';
+    popup.id = 'popupMarle';
+    message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Marle </h1>
+            <img src="assets/Marle.webp" alt="marle">
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 80 <br> MP: 4 <br> Evade: 8 <br> Hit: 8 <br> Magic: 6 <br> M.Def: 3 <br> Power: 4 <br> Stamina: 8 <br> Speed: 11
+        </div>
+    </div>
+</div> `;
     appendAny();
 }
 

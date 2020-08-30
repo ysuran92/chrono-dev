@@ -230,8 +230,27 @@
         width: 3.5rem;
     }
     
-    .popupCrono,
+    .popupCrono {
+        background: url(assets/cronoPopupBack.jpg);
+    }
+    
     .popupLucca {
+        background: url(assets/luccaPopupBack.jpg);
+    }
+    
+    .popupFrog {
+        background: url(assets/frogPopupBack.jpg);
+        color: rgb(230, 230, 230);
+    }
+    
+    .popupMarle {
+        background: url(assets/marlePopupBack.png);
+    }
+    
+    .popupCrono,
+    .popupLucca,
+    .popupFrog,
+    .popupMarle {
         position: absolute;
         top: -25rem;
         left: 37vw;
@@ -245,7 +264,6 @@
         border: 2px solid grey;
         z-index: 1002;
         animation: drop 0.5s ease forwards;
-        background: url(assets/cronoPopupBack.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -267,7 +285,9 @@
     }
     
     .popupCrono h1,
-    .popupLucca h1 {
+    .popupLucca h1,
+    .popupFrog h1,
+    .popupMarle h1 {
         font-family: chronoType;
         padding-left: 1rem;
         padding-top: 0.5rem;
@@ -275,8 +295,38 @@
         text-align: left;
     }
     
+    .popupFrog h1 {
+        margin-bottom: 3rem;
+    }
+    
+    .popupMarle h1 {
+        color: rgb(230, 230, 230);
+    }
+    
     .popupCrono img {
         width: 12.4rem;
+    }
+    
+    .popupLucca img {
+        width: 10.6rem;
+    }
+    
+    .popupFrog img {
+        width: 14rem;
+    }
+    
+    .popupMarle img {
+        width: 14rem;
+    }
+    
+    .popupFrog .popupDesc {
+        text-shadow: 2px 2px black;
+    }
+    
+    .popupCrono .popupDesc,
+    .popupLucca .popupDesc,
+    .popupMarle .popupDesc {
+        text-shadow: 1px 1px white;
     }
     
     .popupDesc {
@@ -284,14 +334,16 @@
         top: 7rem;
         left: 17rem;
         font-size: 1rem;
+        height: 50rem;
         font-family: 'Alata', sans-serif;
     }
     
     .cancel {
-        display: relative;
+        position: fixed;
+        top: 26rem;
+        left: 26.7rem;
         cursor: pointer;
         margin: 0;
-        float: right;
         height: 3rem;
         width: 3rem;
         padding: 0;
