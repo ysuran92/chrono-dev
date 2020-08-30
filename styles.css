@@ -421,7 +421,8 @@
         .aboutUsDiv {
             padding: 1rem;
             position: absolute;
-            top: 10rem;
+            top: 8rem;
+            bottom: 5rem;
         }
         .aboutUsP {
             font-size: 11pt;

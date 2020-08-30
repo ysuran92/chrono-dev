@@ -257,6 +257,12 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
+    .customSlider+label {
+        top: -4rem;
+    }
+    .space2 {
+        height: 10vh;
+    }
     .wrapper {
         display: flex;
         flex-wrap: wrap;
