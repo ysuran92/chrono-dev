@@ -367,6 +367,57 @@
         float: left;
     }
     
+    @media only screen and (min-width: 1281px) and (max-width: 1366px) {
+        .sectionTitle2 {
+            top: 6rem;
+        }
+        .aboutUsDiv {
+            padding: 2rem;
+            top: 10rem;
+            bottom: 5rem;
+        }
+        .aboutUsP {
+            font-size: 14pt;
+            color: black;
+            font-family: 'Alata', sans-serif;
+        }
+        #aboutus1 {
+            position: relative;
+            top: 3vh;
+            left: -100rem;
+            transition: all 1s ease-out;
+            -webkit-transition: all 1s ease-out;
+            text-align: left;
+        }
+        #aboutus2 {
+            position: relative;
+            top: 3vh;
+            left: -100rem;
+            transition: all 1.3s ease-out;
+            -webkit-transition: all 1.3s ease-out;
+            text-align: left;
+        }
+        .fp-viewing-page2 #aboutus1,
+        .fp-viewing-page2 #aboutus2 {
+            left: 0rem;
+        }
+        i {
+            font-size: 2rem;
+            letter-spacing: 10pt;
+        }
+        .deviconDiv {
+            text-align: center;
+            padding: 0%;
+            margin-top: -40px;
+            margin-bottom: 10px;
+        }
+        #theTeam {
+            position: absolute;
+            padding-bottom: 50px;
+            top: 100px;
+        }
+    }
+    
     @media only screen and (max-width: 1280px) {
         .nav-mobile {
             display: block;
