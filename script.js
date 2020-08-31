@@ -400,7 +400,7 @@ $(document).ready(function() {
         e.stopPropagation();
     });
     $('body').mouseup(function() {
-        $('.nav-list').slideUp("fast");
+        $('.nav-list').slideUp(400);
     });
 });
 
