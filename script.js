@@ -395,15 +395,6 @@ if ($(window).width() < 1280) {
 ////////////////////////////
 // End popup divs for page 5
 
-/*
-document.addEventListener('mouseup', function(e) {
-    var container = document.getElementById('popupAyla');
-    if (!container.contains(e.target)) {
-        container.style.display = 'none';
-    }
-});
-*/
-
 $(document).ready(function() {
     $('.nav-list').mouseup(function(e) {
         e.stopPropagation();
