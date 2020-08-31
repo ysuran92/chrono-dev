@@ -397,6 +397,11 @@ if ($(window).width() < 1280) {
 
 if ($(window).width() < 1280) {
     $(document).ready(function() {
+        $('#nav-toggle').mouseup(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('.popupClass').toggle();
+        });
         $('.nav-list').mouseup(function(e) {
             e.stopPropagation();
         });
