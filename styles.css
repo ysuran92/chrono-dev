@@ -663,10 +663,55 @@
         .friendsDivs {
             padding: 0rem;
         }
-        .popupCrono,
-        .popupLucca {
+        #popupCrono,
+        #popupLucca,
+        #popupFrog,
+        #popupMarle,
+        #popupRobo,
+        #popupMagus,
+        #popupAyla {
+            top: -75vh;
+            left: 37vw;
+            width: 50vw;
+            height: 60vh;
+        }
+        #popupCrono h1,
+        #popupLucca h1,
+        #popupRobo h1,
+        #popupMagus h1,
+        #popupAyla h1 {
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+        }
+        #popupFrog h1 {
+            color: black;
+            padding-left: 2rem;
+        }
+        #popupMarle h1 {
+            color: black;
+        }
+        #popupAyla {
+            background-size: 200%;
+            background-position: 5%;
+        }
+        #popupLucca {
+            background-size: 300%;
+            background-position-x: -20rem;
+        }
+        .popupDesc {
+            left: 0rem;
+            right: 0rem;
+            padding: 0px;
+            padding-top: 4vh;
+            padding-left: 3vw;
+            top: 3rem;
             position: absolute;
-            top: 55%;
+            height: 0rem;
+        }
+        .cancel {
+            position: absolute;
+            left: 36.4vw;
+            top: 52.3vh;
         }
     }
     

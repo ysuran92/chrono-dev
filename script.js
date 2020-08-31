@@ -37,10 +37,124 @@ function appendAny() {
     document.getElementById("popupArea").appendChild(popup);
 }
 
-function popUpCrono() {
-    popup.className = 'popupClass';
-    popup.id = 'popupCrono';
-    message.innerHTML = ` 
+if ($(window).width() < 1280) {
+
+    function popUpCrono() {
+        popup.className = 'popupClass';
+        popup.id = 'popupCrono';
+        message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Crono </h1>
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 70 <br> MP: 8 <br> Evade: 8 <br> Hit: 8 <br> Magic: 5 <br> M.Def: 2 <br> Power: 5 <br> Stamina: 8 <br> Speed: 12
+        </div>
+    </div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpLucca() {
+        popup.className = 'popupClass';
+        popup.id = 'popupLucca';
+        message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Lucca </h1>
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 62 <br> MP: 12 <br> Evade: 7 <br> Hit: 8 <br> Magic: 8 <br> M.Def: 7 <br> Power: 2 <br> Stamina: 6 <br> Speed: 6
+        </div>
+    </div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpFrog() {
+        popup.className = 'popupClass';
+        popup.id = 'popupFrog';
+        message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Frog </h1>
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 80 <br> MP: 4 <br> Evade: 8 <br> Hit: 8 <br> Magic: 6 <br> M.Def: 3 <br> Power: 4 <br> Stamina: 8 <br> Speed: 11
+        </div>
+    </div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpMarle() {
+        popup.className = 'popupClass';
+        popup.id = 'popupMarle';
+        message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Marle </h1>
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 65 <br> MP: 12 <br> Evade: 6 <br> Hit: 8 <br> Magic: 8 <br> M.Def: 8 <br> Power: 2 <br> Stamina: 6 <br> Speed: 8
+        </div>
+    </div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpRobo() {
+        popup.className = 'popupClass';
+        popup.id = 'popupRobo';
+        message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Robo </h1>
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 130 <br> MP: 6 <br> Evade: 7 <br> Hit: 7 <br> Magic: 3 <br> M.Def: 1 <br> Power: 7 <br> Stamina: 10 <br> Speed: 6
+        </div>
+    </div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpMagus() {
+        popup.className = 'popupClass';
+        popup.id = 'popupMagus';
+        message.innerHTML = ` 
+    <div class="container"> <div class="row">
+        <div class="col-3">
+            <h1> Magus </h1>
+        </div>
+        <div class="col-6 popupDesc">
+            HP: 110 <br> MP: 14 <br> Evade: 10 <br> Hit: 12 <br> Magic: 10 <br> M.Def: 9 <br> Power: 8 <br> Stamina: 7 <br> Speed: 12
+        </div>
+    </div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpAyla() {
+        popup.className = 'popupClass';
+        popup.id = 'popupAyla';
+        message.innerHTML = ` 
+    <div>
+            <h1> Ayla </h1>
+            </div>
+            <p class="popupDesc">
+            HP: 80 <br> MP: 4 <br> Evade: 12 <br> Hit: 10 <br> Magic: 3 <br> M.Def: 1 <br> Power: 10 <br> Stamina: 9 <br> Speed: 13
+            </p>
+            </div> `;
+        appendAny();
+    }
+
+} else if ($(window).width() <= 1366 && $(window).width() > 1280) {
+
+    function popUpCrono() {
+        popup.className = 'popupClass';
+        popup.id = 'popupCrono';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Crono </h1>
@@ -51,13 +165,13 @@ function popUpCrono() {
         </div>
     </div>
 </div> `;
-    appendAny();
-}
+        appendAny();
+    }
 
-function popUpLucca() {
-    popup.className = 'popupClass';
-    popup.id = 'popupLucca';
-    message.innerHTML = ` 
+    function popUpLucca() {
+        popup.className = 'popupClass';
+        popup.id = 'popupLucca';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Lucca </h1>
@@ -68,13 +182,13 @@ function popUpLucca() {
         </div>
     </div>
 </div> `;
-    appendAny();
-}
+        appendAny();
+    }
 
-function popUpFrog() {
-    popup.className = 'popupClass';
-    popup.id = 'popupFrog';
-    message.innerHTML = ` 
+    function popUpFrog() {
+        popup.className = 'popupClass';
+        popup.id = 'popupFrog';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Frog </h1>
@@ -85,13 +199,13 @@ function popUpFrog() {
         </div>
     </div>
 </div> `;
-    appendAny();
-}
+        appendAny();
+    }
 
-function popUpMarle() {
-    popup.className = 'popupClass';
-    popup.id = 'popupMarle';
-    message.innerHTML = ` 
+    function popUpMarle() {
+        popup.className = 'popupClass';
+        popup.id = 'popupMarle';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Marle </h1>
@@ -102,13 +216,13 @@ function popUpMarle() {
         </div>
     </div>
 </div> `;
-    appendAny();
-}
+        appendAny();
+    }
 
-function popUpRobo() {
-    popup.className = 'popupClass';
-    popup.id = 'popupRobo';
-    message.innerHTML = ` 
+    function popUpRobo() {
+        popup.className = 'popupClass';
+        popup.id = 'popupRobo';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Robo </h1>
@@ -119,13 +233,13 @@ function popUpRobo() {
         </div>
     </div>
 </div> `;
-    appendAny();
-}
+        appendAny();
+    }
 
-function popUpMagus() {
-    popup.className = 'popupClass';
-    popup.id = 'popupMagus';
-    message.innerHTML = ` 
+    function popUpMagus() {
+        popup.className = 'popupClass';
+        popup.id = 'popupMagus';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Magus </h1>
@@ -136,13 +250,13 @@ function popUpMagus() {
         </div>
     </div>
 </div> `;
-    appendAny();
-}
+        appendAny();
+    }
 
-function popUpAyla() {
-    popup.className = 'popupClass';
-    popup.id = 'popupAyla';
-    message.innerHTML = ` 
+    function popUpAyla() {
+        popup.className = 'popupClass';
+        popup.id = 'popupAyla';
+        message.innerHTML = ` 
     <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Ayla </h1>
@@ -153,9 +267,131 @@ function popUpAyla() {
         </div>
     </div>
 </div> `;
-    appendAny();
+        appendAny();
+    }
+    ///////////////////////////////////////////////// LEAVE THE FOLLOWING AS IS /////////////////////////////////////////////////////////
+} else if ($(window).width() > 1366) {
+    function popUpCrono() {
+        popup.className = 'popupClass';
+        popup.id = 'popupCrono';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Crono </h1>
+        <img src="assets/Crono.webp" alt="crono">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 70 <br> MP: 8 <br> Evade: 8 <br> Hit: 8 <br> Magic: 5 <br> M.Def: 2 <br> Power: 5 <br> Stamina: 8 <br> Speed: 12
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpLucca() {
+        popup.className = 'popupClass';
+        popup.id = 'popupLucca';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Lucca </h1>
+        <img src="assets/Lucca.webp" alt="lucca">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 62 <br> MP: 12 <br> Evade: 7 <br> Hit: 8 <br> Magic: 8 <br> M.Def: 7 <br> Power: 2 <br> Stamina: 6 <br> Speed: 6
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpFrog() {
+        popup.className = 'popupClass';
+        popup.id = 'popupFrog';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Frog </h1>
+        <img src="assets/Frog.webp" alt="frog">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 80 <br> MP: 4 <br> Evade: 8 <br> Hit: 8 <br> Magic: 6 <br> M.Def: 3 <br> Power: 4 <br> Stamina: 8 <br> Speed: 11
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpMarle() {
+        popup.className = 'popupClass';
+        popup.id = 'popupMarle';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Marle </h1>
+        <img src="assets/Marle.webp" alt="marle">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 65 <br> MP: 12 <br> Evade: 6 <br> Hit: 8 <br> Magic: 8 <br> M.Def: 8 <br> Power: 2 <br> Stamina: 6 <br> Speed: 8
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpRobo() {
+        popup.className = 'popupClass';
+        popup.id = 'popupRobo';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Robo </h1>
+        <img src="assets/Robo.webp" alt="robo">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 130 <br> MP: 6 <br> Evade: 7 <br> Hit: 7 <br> Magic: 3 <br> M.Def: 1 <br> Power: 7 <br> Stamina: 10 <br> Speed: 6
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpMagus() {
+        popup.className = 'popupClass';
+        popup.id = 'popupMagus';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Magus </h1>
+        <img src="assets/Magus.webp" alt="magus">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 110 <br> MP: 14 <br> Evade: 10 <br> Hit: 12 <br> Magic: 10 <br> M.Def: 9 <br> Power: 8 <br> Stamina: 7 <br> Speed: 12
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
+
+    function popUpAyla() {
+        popup.className = 'popupClass';
+        popup.id = 'popupAyla';
+        message.innerHTML = ` 
+<div class="container"> <div class="row">
+    <div class="col-3">
+        <h1> Ayla </h1>
+        <img src="assets/Ayla.png" alt="ayla">
+    </div>
+    <div class="col-6 popupDesc">
+        HP: 80 <br> MP: 4 <br> Evade: 12 <br> Hit: 10 <br> Magic: 3 <br> M.Def: 1 <br> Power: 10 <br> Stamina: 9 <br> Speed: 13
+    </div>
+</div>
+</div> `;
+        appendAny();
+    }
 }
 
+////////////////////////////
 // End popup divs for page 5
 
 /*
@@ -169,12 +405,12 @@ document.addEventListener('mouseup', function(e) {
 
 $(document).ready(function() {
     $('.link').click(function(e) {
-        e.preventDefault(); // stops link from making page jump to the top
-        e.stopPropagation(); // when you click the button, it stops the page from seeing it as clicking the body too
+        e.preventDefault();
+        e.stopPropagation();
         $('.popupClass').toggle();
     });
     $('.popupClass').click(function(e) {
-        e.stopPropagation(); // when you click within the content area, it stops the page from seeing it as clicking the body too
+        e.stopPropagation();
     });
     $('body').click(function() {
         $('.popupClass').hide();
