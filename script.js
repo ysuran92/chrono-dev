@@ -395,14 +395,16 @@ if ($(window).width() < 1280) {
 ////////////////////////////
 // End popup divs for page 5
 
-$(document).ready(function() {
-    $('.nav-list').mouseup(function(e) {
-        e.stopPropagation();
+if ($(window).width() < 1280) {
+    $(document).ready(function() {
+        $('.nav-list').mouseup(function(e) {
+            e.stopPropagation();
+        });
+        $('body').mouseup(function() {
+            $('.nav-list').slideUp(400);
+        });
     });
-    $('body').mouseup(function() {
-        $('.nav-list').slideUp(400);
-    });
-});
+}
 
 $(document).ready(function() {
     $('.link').mouseup(function(e) {
