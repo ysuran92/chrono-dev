@@ -37,6 +37,11 @@ function appendAny() {
     document.getElementById("popupArea").appendChild(popup);
 }
 
+function appendNoCancel() {
+    popup.appendChild(message);
+    document.getElementById("popupArea").appendChild(popup);
+}
+
 if ($(window).width() < 1280) {
 
     function popUpCrono() {
@@ -52,7 +57,7 @@ if ($(window).width() < 1280) {
         </div>
     </div>
 </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
     function popUpLucca() {
@@ -68,7 +73,7 @@ if ($(window).width() < 1280) {
         </div>
     </div>
 </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
     function popUpFrog() {
@@ -84,7 +89,7 @@ if ($(window).width() < 1280) {
         </div>
     </div>
 </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
     function popUpMarle() {
@@ -100,7 +105,7 @@ if ($(window).width() < 1280) {
         </div>
     </div>
 </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
     function popUpRobo() {
@@ -116,7 +121,7 @@ if ($(window).width() < 1280) {
         </div>
     </div>
 </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
     function popUpMagus() {
@@ -132,7 +137,7 @@ if ($(window).width() < 1280) {
         </div>
     </div>
 </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
     function popUpAyla() {
@@ -146,7 +151,7 @@ if ($(window).width() < 1280) {
             HP: 80 <br> MP: 4 <br> Evade: 12 <br> Hit: 10 <br> Magic: 3 <br> M.Def: 1 <br> Power: 10 <br> Stamina: 9 <br> Speed: 13
             </p>
             </div> `;
-        appendAny();
+        appendNoCancel();
     }
 
 } else if ($(window).width() <= 1366 && $(window).width() > 1280) {

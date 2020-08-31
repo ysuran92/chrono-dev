@@ -670,7 +670,7 @@
         #popupRobo,
         #popupMagus,
         #popupAyla {
-            top: -75vh;
+            top: -35rem;
             left: 37vw;
             width: 50vw;
             height: 60vh;
@@ -707,12 +707,15 @@
             top: 3rem;
             position: absolute;
             height: 0rem;
+            font-size: 0.8rem;
         }
+        /*
         .cancel {
             position: absolute;
             left: 36.4vw;
             top: 52.3vh;
         }
+        */
     }
     
     @media screen and (min-width: 1280px) {
