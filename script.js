@@ -408,16 +408,17 @@ document.addEventListener('mouseup', function(e) {
 });
 */
 
+
 $(document).ready(function() {
-    $('.link').click(function(e) {
+    $('.link').mouseup(function(e) {
         e.preventDefault();
         e.stopPropagation();
         $('.popupClass').toggle();
     });
-    $('.popupClass').click(function(e) {
+    $('.popupClass').mouseup(function(e) {
         e.stopPropagation();
     });
-    $('body').click(function() {
+    $('body').mouseup(function() {
         $('.popupClass').hide();
     });
 });

@@ -776,3 +776,7 @@
         margin: 0 auto;
         padding: 10px;
     }
+    
+    #cronoLink {
+        z-index: 1005;
+    }
