@@ -407,6 +407,7 @@ if ($(window).width() < 1280) {
         });
         $('body').mouseup(function() {
             $('.nav-list').slideUp(400);
+            $('#nav-toggle').removeClass("active");
         });
     });
 }
