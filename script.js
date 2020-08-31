@@ -7,10 +7,6 @@
             $('.nav-dropdown').not($(this).siblings()).hide();
             e.stopPropagation();
         });
-        // Clicking away from dropdown will remove the dropdown class
-        $('html').click(function() {
-            $('.nav-dropdown').hide();
-        });
         // Toggle open and close nav styles on click
         $('#nav-toggle').click(function() {
             $('nav ul').slideToggle();
@@ -408,6 +404,14 @@ document.addEventListener('mouseup', function(e) {
 });
 */
 
+$(document).ready(function() {
+    $('.nav-list').mouseup(function(e) {
+        e.stopPropagation();
+    });
+    $('body').mouseup(function() {
+        $('.nav-list').slideUp("fast");
+    });
+});
 
 $(document).ready(function() {
     $('.link').mouseup(function(e) {
