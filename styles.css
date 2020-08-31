@@ -230,45 +230,49 @@
         width: 3.5rem;
     }
     
-    .popupCrono {
+    .friendsDivs {
+        padding: 1rem;
+    }
+    
+    #popupCrono {
         background: url(assets/cronoPopupBack.jpg);
     }
     
-    .popupLucca {
+    #popupLucca {
         background: url(assets/luccaPopupBack.jpg);
     }
     
-    .popupFrog {
+    #popupFrog {
         background: url(assets/frogPopupBack.jpg);
         color: rgb(230, 230, 230);
     }
     
-    .popupMarle {
+    #popupMarle {
         background: url(assets/marlePopupBack.png);
     }
     
-    .popupRobo {
+    #popupRobo {
         background: url(assets/roboPopupBack.jpg);
         color: rgb(230, 230, 230);
     }
     
-    .popupMagus {
+    #popupMagus {
         background: url(assets/magusPopupBack.jpg);
         color: rgb(230, 230, 230);
     }
     
-    .popupAyla {
+    #popupAyla {
         background: url(assets/aylaPopupBack.jpg);
         color: rgb(230, 230, 230);
     }
     
-    .popupCrono,
-    .popupLucca,
-    .popupFrog,
-    .popupMarle,
-    .popupRobo,
-    .popupMagus,
-    .popupAyla {
+    #popupCrono,
+    #popupLucca,
+    #popupFrog,
+    #popupMarle,
+    #popupRobo,
+    #popupMagus,
+    #popupAyla {
         position: absolute;
         top: -25rem;
         left: 37vw;
@@ -287,11 +291,11 @@
         background-position: center center;
     }
     
-    .popupRobo {
+    #popupRobo {
         background-position-x: 75%;
     }
     
-    .popupAyla {
+    #popupAyla {
         background-size: 130%;
         background-position: 5%;
     }
@@ -311,13 +315,13 @@
         src: url(fonts/ChronoType.ttf);
     }
     
-    .popupCrono h1,
-    .popupLucca h1,
-    .popupFrog h1,
-    .popupMarle h1,
-    .popupRobo h1,
-    .popupMagus h1,
-    .popupAyla h1 {
+    #popupCrono h1,
+    #popupLucca h1,
+    #popupFrog h1,
+    #popupMarle h1,
+    #popupRobo h1,
+    #popupMagus h1,
+    #popupAyla h1 {
         font-family: chronoType;
         padding-left: 1rem;
         padding-top: 0.5rem;
@@ -325,55 +329,54 @@
         text-align: left;
     }
     
-    .popupFrog h1 {
+    #popupFrog h1 {
         margin-bottom: 3rem;
     }
     
-    .popupMagus h1 {
+    #popupMagus h1 {
         margin-bottom: 2rem;
     }
     
-    .popupMarle h1 {
+    #popupMarle h1 {
         color: rgb(230, 230, 230);
     }
     
-    .popupAyla h1 {
+    #popupAyla h1 {
         color: black;
     }
     
-    .popupCrono img {
+    #popupCrono img {
         width: 12.4rem;
     }
     
-    .popupLucca img {
+    #popupLucca img {
         width: 10.6rem;
     }
     
-    .popupFrog img,
-    .popupMarle img,
-    .popupRobo img {
+    #popupFrog img,
+    #popupMarle img,
+    #popupRobo img {
         width: 14rem;
     }
     
-    .popupMagus img {
+    #popupMagus img {
         width: 15rem;
     }
     
-    .popupAyla img {
+    #popupAyla img {
         width: 11.5rem;
     }
     
-    .popupFrog .popupDesc,
-    .popupRobo .popupDesc,
-    .popupMagus .popupDesc,
-    .popupAyla .popupDesc {
+    #popupFrog .popupDesc,
+    #popupRobo .popupDesc,
+    #popupMagus .popupDesc,
+    #popupAyla .popupDesc {
         text-shadow: 2px 2px black;
     }
     
-    .popupCrono .popupDesc,
-    .popupLucca .popupDesc,
-    .popupMarle .popupDesc,
-    {
+    #popupCrono .popupDesc,
+    #popupLucca .popupDesc,
+    #popupMarle .popupDesc {
         text-shadow: 1px 1px white;
     }
     
@@ -552,6 +555,9 @@
             padding-bottom: 50px;
             top: 100px;
         }
+        .friendsDivs {
+            padding: 0.5rem;
+        }
     }
     
     @media only screen and (max-width: 1280px) {
@@ -653,6 +659,9 @@
         }
         .fp-viewing-page4 .wipP {
             left: 0rem;
+        }
+        .friendsDivs {
+            padding: 0rem;
         }
         .popupCrono,
         .popupLucca {

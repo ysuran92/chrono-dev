@@ -38,7 +38,7 @@ function appendAny() {
 }
 
 function popUpCrono() {
-    popup.className = 'popupCrono';
+    popup.className = 'popupClass';
     popup.id = 'popupCrono';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -55,7 +55,7 @@ function popUpCrono() {
 }
 
 function popUpLucca() {
-    popup.className = 'popupLucca';
+    popup.className = 'popupClass';
     popup.id = 'popupLucca';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -72,7 +72,7 @@ function popUpLucca() {
 }
 
 function popUpFrog() {
-    popup.className = 'popupFrog';
+    popup.className = 'popupClass';
     popup.id = 'popupFrog';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -89,7 +89,7 @@ function popUpFrog() {
 }
 
 function popUpMarle() {
-    popup.className = 'popupMarle';
+    popup.className = 'popupClass';
     popup.id = 'popupMarle';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -106,7 +106,7 @@ function popUpMarle() {
 }
 
 function popUpRobo() {
-    popup.className = 'popupRobo';
+    popup.className = 'popupClass';
     popup.id = 'popupRobo';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -123,7 +123,7 @@ function popUpRobo() {
 }
 
 function popUpMagus() {
-    popup.className = 'popupMagus';
+    popup.className = 'popupClass';
     popup.id = 'popupMagus';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -140,7 +140,7 @@ function popUpMagus() {
 }
 
 function popUpAyla() {
-    popup.className = 'popupAyla';
+    popup.className = 'popupClass';
     popup.id = 'popupAyla';
     message.innerHTML = ` 
     <div class="container"> <div class="row">
@@ -157,3 +157,26 @@ function popUpAyla() {
 }
 
 // End popup divs for page 5
+
+/*
+document.addEventListener('mouseup', function(e) {
+    var container = document.getElementById('popupAyla');
+    if (!container.contains(e.target)) {
+        container.style.display = 'none';
+    }
+});
+*/
+
+$(document).ready(function() {
+    $('.link').click(function(e) {
+        e.preventDefault(); // stops link from making page jump to the top
+        e.stopPropagation(); // when you click the button, it stops the page from seeing it as clicking the body too
+        $('.popupClass').toggle();
+    });
+    $('.popupClass').click(function(e) {
+        e.stopPropagation(); // when you click within the content area, it stops the page from seeing it as clicking the body too
+    });
+    $('body').click(function() {
+        $('.popupClass').hide();
+    });
+});
