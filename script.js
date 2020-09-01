@@ -384,7 +384,7 @@ if ($(window).width() > 1366) {
         popup.className = 'popupClass';
         popup.id = 'popupRobo';
         message.innerHTML = ` 
-    <div class="container"> <div class="row">
+        <div class="container"> <div class="row">
         <div class="col-3">
             <h1> Robo </h1>
         </div>
@@ -392,7 +392,7 @@ if ($(window).width() > 1366) {
             HP: 130 <br> MP: 6 <br> Evade: 7 <br> Hit: 7 <br> Magic: 3 <br> M.Def: 1 <br> Power: 7 <br> Stamina: 10 <br> Speed: 6
         </div>
     </div>
-</div> `;
+</div>`;
         appendNoCancel();
     });
 
