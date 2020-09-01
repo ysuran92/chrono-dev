@@ -199,7 +199,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
-} else if (($(window).width() < 1366) && ($(window).width() >= 1280)) {
+} else if (($(window).width() <= 1366) && ($(window).width() >= 1280)) {
 
     cronoLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
