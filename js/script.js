@@ -43,24 +43,12 @@ if ($(window).width() < 1280) {
 /****************************************** START POPUPS FUNCTIONS SECTION ************************************************************/
 
 let popup = document.createElement('div');
-let cancel = document.createElement('div');
-/* cancel.className = 'cancel';
-cancel.innerHTML = 'X';
-cancel.onclick = function(e) { popup.parentNode.removeChild(popup) }; */
 let message = document.createElement('span');
 
 function appendAny() {
     popup.appendChild(message);
-    // popup.appendChild(cancel);
     document.getElementById("popupArea").appendChild(popup);
 }
-
-
-function appendNoCancel() {
-    popup.appendChild(message);
-    document.getElementById("popupArea").appendChild(popup);
-}
-
 
 let cronoLink = document.getElementById("cronoLink");
 let marleLink = document.getElementById("marleLink");
@@ -88,6 +76,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
     marleLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
         popup.id = 'popupMarle';
@@ -104,6 +93,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
     luccaLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
         popup.id = 'popupLucca';
@@ -120,6 +110,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
     roboLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
         popup.id = 'popupRobo';
@@ -136,6 +127,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
     frogLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
         popup.id = 'popupFrog';
@@ -152,6 +144,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
     magusLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
         popup.id = 'popupMagus';
@@ -168,6 +161,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
     aylaLink.addEventListener("mouseup", function() {
         popup.className = 'popupClass';
         popup.id = 'popupAyla';
@@ -184,6 +178,7 @@ if ($(window).width() > 1366) {
     </div> `;
         appendAny();
     });
+
 } else if (($(window).width() <= 1366) && ($(window).width() >= 1280)) {
 
     cronoLink.addEventListener("mouseup", function() {
@@ -320,7 +315,7 @@ if ($(window).width() > 1366) {
         </div>
     </div>
 </div> `;
-        appendNoCancel();
+        appendAny();
     });
 
     luccaLink.addEventListener("mouseup", function() {
@@ -336,7 +331,7 @@ if ($(window).width() > 1366) {
         </div>
     </div>
 </div> `;
-        appendNoCancel();
+        appendAny();
     });
 
     frogLink.addEventListener("mouseup", function() {
@@ -352,7 +347,7 @@ if ($(window).width() > 1366) {
         </div>
     </div>
 </div> `;
-        appendNoCancel();
+        appendAny();
     });
 
     marleLink.addEventListener("mouseup", function() {
@@ -368,7 +363,7 @@ if ($(window).width() > 1366) {
         </div>
     </div>
 </div> `;
-        appendNoCancel();
+        appendAny();
     });
 
     roboLink.addEventListener("mouseup", function() {
@@ -384,7 +379,7 @@ if ($(window).width() > 1366) {
         </div>
     </div>
 </div>`;
-        appendNoCancel();
+        appendAny();
     });
 
     magusLink.addEventListener("mouseup", function() {
@@ -400,7 +395,7 @@ if ($(window).width() > 1366) {
         </div>
     </div>
 </div> `;
-        appendNoCancel();
+        appendAny();
     });
 
     aylaLink.addEventListener("mouseup", function() {
@@ -414,7 +409,7 @@ if ($(window).width() > 1366) {
             HP: 80 <br> MP: 4 <br> Evade: 12 <br> Hit: 10 <br> Magic: 3 <br> M.Def: 1 <br> Power: 10 <br> Stamina: 9 <br> Speed: 13
             </p>
             </div> `;
-        appendNoCancel();
+        appendAny();
     });
 };
 
