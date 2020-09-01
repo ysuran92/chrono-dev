@@ -70,12 +70,12 @@ function appendAny() {
     document.getElementById("popupArea").appendChild(popup);
 }
 
-/*
+
 function appendNoCancel() {
     popup.appendChild(message);
     document.getElementById("popupArea").appendChild(popup);
 }
-*/
+
 
 let cronoLink = document.getElementById("cronoLink");
 let marleLink = document.getElementById("marleLink");
