@@ -172,20 +172,6 @@ if ($(window).width() < 1280) {
     
 */
 
-$(document).ready(function() {
-    $('.link').mouseup(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $('.popupClass').toggle();
-    });
-    $('.popupClass').mouseup(function(e) {
-        e.stopPropagation();
-    });
-    $('body').mouseup(function() {
-        $('.popupClass').hide();
-    });
-});
-
 /****************************************** START POPUPS FUNCTIONS SECTION ************************************************************/
 
 let popup = document.createElement('div');
@@ -440,4 +426,19 @@ if ($(window).width() > 1366) {
         appendNoCancel();
     });
 };
+
+$(document).ready(function() {
+    $('.link').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.popupClass').toggle();
+    });
+    $('.popupClass').mouseup(function(e) {
+        e.stopPropagation();
+    });
+    $('body').mouseup(function() {
+        $('.popupClass').hide();
+    });
+});
+
 /********************************************** END POPUPS FUNCTIONS SECTION ************************************************************/
