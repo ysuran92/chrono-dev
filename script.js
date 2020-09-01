@@ -176,14 +176,14 @@ if ($(window).width() < 1280) {
 
 let popup = document.createElement('div');
 let cancel = document.createElement('div');
-cancel.className = 'cancel';
+/* cancel.className = 'cancel';
 cancel.innerHTML = 'X';
-cancel.onclick = function(e) { popup.parentNode.removeChild(popup) };
+cancel.onclick = function(e) { popup.parentNode.removeChild(popup) }; */
 let message = document.createElement('span');
 
 function appendAny() {
     popup.appendChild(message);
-    popup.appendChild(cancel);
+    // popup.appendChild(cancel);
     document.getElementById("popupArea").appendChild(popup);
 }
 
