@@ -388,7 +388,8 @@
         height: 50rem;
         font-family: 'Alata', sans-serif;
     }
-    
+    /*
+
     .cancel {
         position: fixed;
         top: 26rem;
@@ -412,6 +413,8 @@
     .cancel:hover {
         background: rgba(73, 73, 73, 0.473);
     }
+    
+*/
     
     .fa-bars {
         color: white;
