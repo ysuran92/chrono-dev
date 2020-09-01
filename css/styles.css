@@ -619,6 +619,7 @@
         #theTeam {
             position: absolute;
             padding-bottom: 50px;
+            top: 6rem;
         }
         .aboutUsDiv {
             padding: 1rem;
