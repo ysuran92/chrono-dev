@@ -26,7 +26,7 @@ if ($(window).width() < 1280) {
         $('#nav-toggle').mouseup(function(e) {
             e.preventDefault();
             e.stopPropagation();
-            $('.popupClass').toggle();
+            $('.nav-dropdown').toggle();
         });
         $('.nav-list').mouseup(function(e) {
             e.stopPropagation();
@@ -39,21 +39,6 @@ if ($(window).width() < 1280) {
 }
 
 /*************************************** END NAVBAR AND HAMBURGER MENU SECTION *******************************************************/
-
-
-
-/*
-if ($(window).width() < 1280) {
-
-
-} else 
-
-    
-
-
-
-    
-*/
 
 /****************************************** START POPUPS FUNCTIONS SECTION ************************************************************/
 
