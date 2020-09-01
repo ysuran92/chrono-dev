@@ -434,3 +434,8 @@ $(document).ready(function() {
 });
 
 /********************************************** END POPUPS FUNCTIONS SECTION ************************************************************/
+
+// Animate On Scroll (AOS)
+if ($(window).width() < 1280) {
+    $('.aboutUsP').attr('data-aos', 'zoom-in');
+}
