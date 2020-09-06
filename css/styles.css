@@ -1,271 +1,687 @@
-    .titleFront {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        text-shadow: 4px 2px 2px #000;
+.titleFront {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 4px 2px 2px #000;
+}
+
+.welcome {
+    font-family: 'Alata', sans-serif;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 1px 1px #000;
+    font-size: 15pt;
+}
+
+.sectionTitle,
+.sectionTitle2,
+.sectionTitle3 {
+    position: absolute;
+    top: 10%;
+    left: 49.5%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.sectionTitle2 {
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.sectionTitle3 {
+    color: black;
+}
+
+.card1,
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+    margin: auto !important;
+    text-align: center !important;
+    padding: 0px !important;
+    text-align: center !important;
+    background-color: rgba(56, 56, 56, 0.452) !important;
+}
+
+.card {
+    width: 300px;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.studied {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 11.5pt;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 {
+    background-size: cover;
+}
+
+.section1 {
+    background-image: url(../assets/bak.jpeg);
+    filter: blur(3px);
+}
+
+.section2 {
+    background-image: url(../assets/bak2.jpg);
+}
+
+.section3 {
+    background-image: url(../assets/bak3.jpg);
+    text-align: center;
+}
+
+.section4 {
+    background-image: url(../assets/bak4.jpg);
+}
+
+.section5 {
+    background-image: url(../assets/mainLogo.jpg);
+}
+
+#carlosCard,
+#leoCard {
+    font-size: 30pt !important;
+    color: black !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-gitlab,
+.fa-twitter,
+.fa-linkedin-in,
+.fa-github {
+    color: black;
+}
+
+.aboutUsDiv {
+    padding: 25rem;
+    position: absolute;
+    top: -3rem;
+}
+
+.aboutUsP {
+    font-size: 14pt;
+    color: black;
+    font-family: 'Alata', sans-serif;
+}
+
+i {
+    font-size: 3rem;
+    letter-spacing: 10pt;
+}
+
+.deviconDiv {
+    text-align: center;
+    padding: 0%;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+#aboutus1 {
+    position: relative;
+    top: 0rem;
+    left: -100rem;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+#aboutus2 {
+    position: relative;
+    top: 0rem;
+    left: -150rem;
+    transition: all 1.3s ease-out;
+    -webkit-transition: all 1.3s ease-out;
+}
+
+.fp-viewing-page2 #aboutus1,
+.fp-viewing-page2 #aboutus2 {
+    left: -9rem;
+}
+
+#kanban {
+    width: 30%;
+    position: relative;
+    left: -100rem;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.wipP {
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 20pt;
+    top: -0.6rem;
+    font-family: 'Alata', sans-serif;
+    color: slategray;
+    left: -100rem;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.fp-viewing-page4 #kanban {
+    left: -10rem;
+}
+
+.fp-viewing-page4 .wipP {
+    left: -10rem;
+}
+
+#roboImg {
+    width: 3.5rem;
+}
+
+.friendsDivs {
+    padding: 1rem;
+}
+
+#popupCrono {
+    background: url(../assets/cronoPopupBack.jpg);
+}
+
+#popupLucca {
+    background: url(../assets/luccaPopupBack.jpg);
+}
+
+#popupFrog {
+    background: url(../assets/frogPopupBack.jpg);
+    color: rgb(230, 230, 230);
+}
+
+#popupMarle {
+    background: url(../assets/marlePopupBack.png);
+}
+
+#popupRobo {
+    background: url(../assets/roboPopupBack.jpg);
+    color: rgb(230, 230, 230);
+}
+
+#popupMagus {
+    background: url(../assets/magusPopupBack.jpg);
+    color: rgb(230, 230, 230);
+}
+
+#popupAyla {
+    background: url(../assets/aylaPopupBack.jpg);
+    color: rgb(230, 230, 230);
+}
+
+#popupCrono,
+#popupLucca,
+#popupFrog,
+#popupMarle,
+#popupRobo,
+#popupMagus,
+#popupAyla {
+    position: absolute;
+    top: -25rem;
+    left: 37vw;
+    margin: auto;
+    width: 25vw;
+    height: 50vh;
+    border-radius: 2rem;
+    font-family: verdana;
+    font-size: 13px;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid grey;
+    z-index: 1002;
+    animation: drop 0.5s ease forwards;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#popupRobo {
+    background-position-x: 75%;
+}
+
+#popupAyla {
+    background-size: 130%;
+    background-position: 5%;
+}
+
+@keyframes drop {
+    0% {}
+    70% {
+        transform: translateY(43rem);
     }
-    
-    .welcome {
-        font-family: 'Alata', sans-serif;
-        border-radius: 1em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        text-shadow: 2px 1px 1px #000;
-        font-size: 15pt;
+    100% {
+        transform: translateY(40rem);
     }
-    
-    .sectionTitle,
-    .sectionTitle2,
-    .sectionTitle3 {
-        position: absolute;
-        top: 10%;
-        left: 49.5%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-    }
-    
+}
+
+@font-face {
+    font-family: chronoType;
+    src: url(../fonts/ChronoType.ttf);
+}
+
+#popupCrono h1,
+#popupLucca h1,
+#popupFrog h1,
+#popupMarle h1,
+#popupRobo h1,
+#popupMagus h1,
+#popupAyla h1 {
+    font-family: chronoType;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    position: relative;
+    text-align: left;
+}
+
+#popupFrog h1 {
+    margin-bottom: 3rem;
+}
+
+#popupMagus h1 {
+    margin-bottom: 2rem;
+}
+
+#popupMarle h1 {
+    color: rgb(230, 230, 230);
+}
+
+#popupAyla h1 {
+    color: black;
+}
+
+#popupCrono img {
+    width: 12.4rem;
+}
+
+#popupLucca img {
+    width: 10.6rem;
+}
+
+#popupFrog img,
+#popupMarle img,
+#popupRobo img {
+    width: 14rem;
+}
+
+#popupMagus img {
+    width: 15rem;
+}
+
+#popupAyla img {
+    width: 11.5rem;
+}
+
+#popupFrog .popupDesc,
+#popupRobo .popupDesc,
+#popupMagus .popupDesc,
+#popupAyla .popupDesc {
+    text-shadow: 2px 2px black;
+}
+
+#popupCrono .popupDesc,
+#popupLucca .popupDesc,
+#popupMarle .popupDesc {
+    text-shadow: 1px 1px white;
+}
+
+.popupDesc {
+    position: absolute;
+    top: 7rem;
+    left: 17rem;
+    font-size: 1rem;
+    height: 50rem;
+    font-family: 'Alata', sans-serif;
+}
+
+.fa-bars {
+    color: white;
+}
+
+.navigation {
+    float: left;
+    display: block;
+    position: fixed;
+    z-index: 998;
+    background-color: #000;
+    opacity: 0.8;
+    height: 50px;
+    top: 0px;
+    text-align: center;
+    width: 100vw;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 23pt;
+}
+
+.nav-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 50px;
+    background-color: #000;
+    opacity: 0.8;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+    background: #4b5569;
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+    padding-left: 4px;
+    content: " ▾";
+}
+
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+
+.nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Mobile navigation */
+
+.nav-mobile {
+    display: none;
+    right: 0;
+    background: #000;
+    opacity: 0.8;
+    height: 60px;
+    width: 0px;
+    top: -60px;
+    position: relative;
+    float: left;
+}
+
+
+/***************************************************************************************/
+
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
     .sectionTitle2 {
-        color: rgba(255, 255, 255, 0.733);
+        top: 6rem;
     }
-    
-    .sectionTitle3 {
-        color: black;
-    }
-    
-    .card1,
-    .card2 {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
-        margin: auto !important;
-        text-align: center !important;
-        padding: 0px !important;
-        text-align: center !important;
-        background-color: rgba(56, 56, 56, 0.452) !important;
-    }
-    
-    .card {
-        width: 300px;
-    }
-    
-    .title {
-        color: rgb(0, 0, 0);
-        font-size: 18px;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .studied {
-        color: #000;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 500;
-        font-size: 11.5pt;
-    }
-    
-    button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-    }
-    
-    a {
-        text-decoration: none;
-        font-size: 22px;
-        color: black;
-    }
-    
-    button:hover,
-    a:hover {
-        opacity: 0.7;
-    }
-    
-    .column {
-        float: left;
-        width: 50%;
-        padding: 0 10px;
-    }
-    
-    .row {
-        margin: 0 -5px;
-    }
-    
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    
-    .section1,
-    .section2,
-    .section3,
-    .section4,
-    .section5 {
-        background-size: cover;
-    }
-    
-    .section1 {
-        background-image: url(../assets/bak.jpeg);
-        filter: blur(3px);
-    }
-    
-    .section2 {
-        background-image: url(../assets/bak2.jpg);
-    }
-    
-    .section3 {
-        background-image: url(../assets/bak3.jpg);
-        text-align: center;
-    }
-    
-    .section4 {
-        background-image: url(../assets/bak4.jpg);
-    }
-    
-    .section5 {
-        background-image: url(../assets/mainLogo.jpg);
-    }
-    
-    #carlosCard,
-    #leoCard {
-        font-size: 30pt !important;
-        color: black !important;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    .fa-gitlab,
-    .fa-twitter,
-    .fa-linkedin-in,
-    .fa-github {
-        color: black;
-    }
-    
     .aboutUsDiv {
-        padding: 25rem;
-        position: absolute;
-        top: -3rem;
+        padding: 2rem;
+        top: 10rem;
+        bottom: 5rem;
     }
-    
     .aboutUsP {
         font-size: 14pt;
         color: black;
         font-family: 'Alata', sans-serif;
     }
-    
+    #aboutus1 {
+        position: relative;
+        top: 3vh;
+        left: -100rem;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        text-align: left;
+    }
+    #aboutus2 {
+        position: relative;
+        top: 3vh;
+        left: -100rem;
+        transition: all 1.3s ease-out;
+        -webkit-transition: all 1.3s ease-out;
+        text-align: left;
+    }
+    .fp-viewing-page2 #aboutus1,
+    .fp-viewing-page2 #aboutus2 {
+        left: 0rem;
+    }
     i {
-        font-size: 3rem;
+        font-size: 2rem;
         letter-spacing: 10pt;
     }
-    
     .deviconDiv {
         text-align: center;
         padding: 0%;
         margin-top: -40px;
         margin-bottom: 10px;
     }
-    
+    #theTeam {
+        position: absolute;
+        padding-bottom: 50px;
+        top: 100px;
+    }
+    .friendsDivs {
+        padding: 0.25rem;
+    }
+    @keyframes drop {
+        0% {}
+        70% {
+            transform: translateY(38rem);
+        }
+        100% {
+            transform: translateY(35rem);
+        }
+    }
+    #popupMarle h1 {
+        text-shadow: 2px 2px black;
+    }
+    #popupCrono img {
+        width: 8rem;
+    }
+    #popupLucca img {
+        width: 7.1rem;
+    }
+    #popupFrog img,
+    #popupMarle img,
+    #popupRobo img {
+        width: 9rem;
+    }
+    #popupMagus img {
+        width: 10rem;
+    }
+    #popupAyla img {
+        width: 7rem;
+    }
+    .popupDesc {
+        top: 3rem;
+        left: 12rem;
+        font-size: 1rem;
+        height: 50rem;
+    }
+}
+
+
+/***************************************************************************************/
+
+@media only screen and (max-width: 1280px) {
+    .column {
+        width: 100vw;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .nav-mobile {
+        display: block;
+    }
+    nav {
+        width: 100vw;
+        padding: 50px 0 15px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul li {
+        float: none;
+    }
+    nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+    }
+    nav ul li ul li a {
+        padding-left: 30px;
+    }
+    .nav-dropdown {
+        position: static;
+    }
+    i {
+        font-size: 2rem;
+        letter-spacing: 10pt;
+    }
+    .titleFront {
+        position: absolute;
+        top: 100px;
+        left: 25vw;
+        right: 25vw;
+        transform: translate(0%, 0%);
+        text-align: center;
+    }
+    .welcome {
+        top: 50vh;
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    #theTeam {
+        position: absolute;
+        padding-bottom: 50px;
+        top: 4.5rem;
+    }
+    .aboutUsDiv {
+        padding: 1rem;
+        position: absolute;
+        top: 6rem;
+        bottom: 5rem;
+    }
+    .aboutUsP {
+        font-size: 11pt;
+        color: black;
+        font-family: 'Alata', sans-serif;
+    }
     #aboutus1 {
         position: relative;
-        top: 0rem;
-        left: -100rem;
+        top: 3vh;
+        left: 0rem;
         transition: all 1s ease-out;
         -webkit-transition: all 1s ease-out;
+        text-align: left;
     }
-    
     #aboutus2 {
         position: relative;
-        top: 0rem;
-        left: -150rem;
+        top: 3vh;
+        left: 0rem;
         transition: all 1.3s ease-out;
         -webkit-transition: all 1.3s ease-out;
+        text-align: left;
     }
-    
     .fp-viewing-page2 #aboutus1,
     .fp-viewing-page2 #aboutus2 {
-        left: -9rem;
+        left: 0rem;
     }
-    
+    #theTeam {
+        position: relative;
+        text-align: center;
+        padding-bottom: 3rem;
+        margin: 0 auto;
+    }
     #kanban {
-        width: 30%;
-        position: relative;
-        left: -100rem;
-        transition: all 1s ease-out;
-        -webkit-transition: all 1s ease-out;
+        display: none;
     }
-    
-    .wipP {
-        position: relative;
-        vertical-align: middle;
-        text-align: left;
-        font-size: 20pt;
-        top: -0.6rem;
-        font-family: 'Alata', sans-serif;
-        color: slategray;
-        left: -100rem;
-        transition: all 1s ease-out;
-        -webkit-transition: all 1s ease-out;
-    }
-    
-    .fp-viewing-page4 #kanban {
-        left: -10rem;
-    }
-    
     .fp-viewing-page4 .wipP {
-        left: -10rem;
+        left: 0rem;
     }
-    
-    #roboImg {
-        width: 3.5rem;
-    }
-    
     .friendsDivs {
-        padding: 1rem;
+        padding: 0rem;
     }
-    
-    #popupCrono {
-        background: url(../assets/cronoPopupBack.jpg);
-    }
-    
-    #popupLucca {
-        background: url(../assets/luccaPopupBack.jpg);
-    }
-    
-    #popupFrog {
-        background: url(../assets/frogPopupBack.jpg);
-        color: rgb(230, 230, 230);
-    }
-    
-    #popupMarle {
-        background: url(../assets/marlePopupBack.png);
-    }
-    
-    #popupRobo {
-        background: url(../assets/roboPopupBack.jpg);
-        color: rgb(230, 230, 230);
-    }
-    
-    #popupMagus {
-        background: url(../assets/magusPopupBack.jpg);
-        color: rgb(230, 230, 230);
-    }
-    
-    #popupAyla {
-        background: url(../assets/aylaPopupBack.jpg);
-        color: rgb(230, 230, 230);
-    }
-    
     #popupCrono,
     #popupLucca,
     #popupFrog,
@@ -273,486 +689,106 @@
     #popupRobo,
     #popupMagus,
     #popupAyla {
-        position: absolute;
-        top: -25rem;
+        top: -35rem;
         left: 37vw;
-        margin: auto;
-        width: 25vw;
-        height: 50vh;
-        border-radius: 2rem;
-        font-family: verdana;
-        font-size: 13px;
-        background-color: rgb(240, 240, 240);
-        border: 2px solid grey;
-        z-index: 1002;
-        animation: drop 0.5s ease forwards;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+        width: 50vw;
+        height: 60vh;
     }
-    
-    #popupRobo {
-        background-position-x: 75%;
-    }
-    
-    #popupAyla {
-        background-size: 130%;
-        background-position: 5%;
-    }
-    
-    @keyframes drop {
-        0% {}
-        70% {
-            transform: translateY(43rem);
-        }
-        100% {
-            transform: translateY(40rem);
-        }
-    }
-    
-    @font-face {
-        font-family: chronoType;
-        src: url(../fonts/ChronoType.ttf);
-    }
-    
     #popupCrono h1,
     #popupLucca h1,
-    #popupFrog h1,
-    #popupMarle h1,
     #popupRobo h1,
     #popupMagus h1,
     #popupAyla h1 {
-        font-family: chronoType;
-        padding-left: 1rem;
+        padding-left: 1.5rem;
         padding-top: 0.5rem;
-        position: relative;
-        text-align: left;
     }
-    
     #popupFrog h1 {
-        margin-bottom: 3rem;
+        color: black;
+        padding-left: 2rem;
     }
-    
-    #popupMagus h1 {
-        margin-bottom: 2rem;
-    }
-    
     #popupMarle h1 {
-        color: rgb(230, 230, 230);
-    }
-    
-    #popupAyla h1 {
         color: black;
     }
-    
-    #popupCrono img {
-        width: 12.4rem;
+    #popupAyla {
+        background-size: 200%;
+        background-position: 5%;
     }
-    
-    #popupLucca img {
-        width: 10.6rem;
+    #popupLucca {
+        background-size: 300%;
+        background-position-x: -20rem;
     }
-    
-    #popupFrog img,
-    #popupMarle img,
-    #popupRobo img {
-        width: 14rem;
-    }
-    
-    #popupMagus img {
-        width: 15rem;
-    }
-    
-    #popupAyla img {
-        width: 11.5rem;
-    }
-    
-    #popupFrog .popupDesc,
-    #popupRobo .popupDesc,
-    #popupMagus .popupDesc,
-    #popupAyla .popupDesc {
-        text-shadow: 2px 2px black;
-    }
-    
-    #popupCrono .popupDesc,
-    #popupLucca .popupDesc,
-    #popupMarle .popupDesc {
-        text-shadow: 1px 1px white;
-    }
-    
     .popupDesc {
+        left: 0rem;
+        right: 0rem;
+        padding: 0px;
+        padding-top: 4vh;
+        padding-left: 3vw;
+        top: 3rem;
         position: absolute;
-        top: 7rem;
-        left: 17rem;
-        font-size: 1rem;
-        height: 50rem;
-        font-family: 'Alata', sans-serif;
+        height: 0rem;
+        font-size: 0.8rem;
     }
-    
-    .fa-bars {
-        color: white;
+}
+
+@media screen and (min-width: 1280px) {
+    .nav-list {
+        display: block !important;
     }
-    
-    .navigation {
-        float: left;
-        display: block;
-        position: fixed;
-        z-index: 998;
-        background-color: #000;
-        opacity: 0.8;
-        height: 50px;
-        top: 0px;
-        text-align: center;
-        width: 100vw;
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 23pt;
-    }
-    
-    .nav-container {
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    nav {
-        float: left;
-    }
-    
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    nav ul li {
-        float: left;
-        position: relative;
-    }
-    
-    nav ul li a,
-    nav ul li a:visited {
-        display: block;
-        padding: 0 20px;
-        line-height: 50px;
-        background-color: #000;
-        opacity: 0.8;
-        color: #ffffff;
-        text-decoration: none;
-    }
-    
-    nav ul li a:hover,
-    nav ul li a:visited:hover {
-        background: #4b5569;
-        opacity: 0.8;
-        color: #ffffff;
-    }
-    
-    nav ul li a:not(:only-child):after,
-    nav ul li a:visited:not(:only-child):after {
-        padding-left: 4px;
-        content: " ▾";
-    }
-    
-    nav ul li ul li {
-        min-width: 190px;
-    }
-    
-    nav ul li ul li a {
-        padding: 15px;
-        line-height: 20px;
-    }
-    
-    .nav-dropdown {
-        position: absolute;
-        display: none;
-        z-index: 999;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-    }
-    /* Mobile navigation */
-    
-    .nav-mobile {
-        display: none;
-        right: 0;
-        background: #000;
-        opacity: 0.8;
-        height: 60px;
-        width: 0px;
-        top: -60px;
-        position: relative;
-        float: left;
-    }
-    
-    @media only screen and (min-width: 1281px) and (max-width: 1366px) {
-        .sectionTitle2 {
-            top: 6rem;
-        }
-        .aboutUsDiv {
-            padding: 2rem;
-            top: 10rem;
-            bottom: 5rem;
-        }
-        .aboutUsP {
-            font-size: 14pt;
-            color: black;
-            font-family: 'Alata', sans-serif;
-        }
-        #aboutus1 {
-            position: relative;
-            top: 3vh;
-            left: -100rem;
-            transition: all 1s ease-out;
-            -webkit-transition: all 1s ease-out;
-            text-align: left;
-        }
-        #aboutus2 {
-            position: relative;
-            top: 3vh;
-            left: -100rem;
-            transition: all 1.3s ease-out;
-            -webkit-transition: all 1.3s ease-out;
-            text-align: left;
-        }
-        .fp-viewing-page2 #aboutus1,
-        .fp-viewing-page2 #aboutus2 {
-            left: 0rem;
-        }
-        i {
-            font-size: 2rem;
-            letter-spacing: 10pt;
-        }
-        .deviconDiv {
-            text-align: center;
-            padding: 0%;
-            margin-top: -40px;
-            margin-bottom: 10px;
-        }
-        #theTeam {
-            position: absolute;
-            padding-bottom: 50px;
-            top: 100px;
-        }
-        .friendsDivs {
-            padding: 0.5rem;
-        }
-    }
-    
-    @media only screen and (max-width: 1280px) {
-        .column {
-            width: 100vw;
-            display: block;
-            margin-bottom: 20px;
-        }
-        .nav-mobile {
-            display: block;
-        }
-        nav {
-            width: 100vw;
-            padding: 50px 0 15px;
-        }
-        nav ul {
-            display: none;
-        }
-        nav ul li {
-            float: none;
-        }
-        nav ul li a {
-            padding: 15px;
-            line-height: 20px;
-        }
-        nav ul li ul li a {
-            padding-left: 30px;
-        }
-        .nav-dropdown {
-            position: static;
-        }
-        i {
-            font-size: 2rem;
-            letter-spacing: 10pt;
-        }
-        .titleFront {
-            position: absolute;
-            top: 100px;
-            left: 25vw;
-            right: 25vw;
-            transform: translate(0%, 0%);
-            text-align: center;
-        }
-        .welcome {
-            top: 50vh;
-        }
-        .section1,
-        .section2,
-        .section3,
-        .section4,
-        .section5 {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-        }
-        #theTeam {
-            position: absolute;
-            padding-bottom: 50px;
-            top: 4.5rem;
-        }
-        .aboutUsDiv {
-            padding: 1rem;
-            position: absolute;
-            top: 6rem;
-            bottom: 5rem;
-        }
-        .aboutUsP {
-            font-size: 11pt;
-            color: black;
-            font-family: 'Alata', sans-serif;
-        }
-        #aboutus1 {
-            position: relative;
-            top: 3vh;
-            left: 0rem;
-            transition: all 1s ease-out;
-            -webkit-transition: all 1s ease-out;
-            text-align: left;
-        }
-        #aboutus2 {
-            position: relative;
-            top: 3vh;
-            left: 0rem;
-            transition: all 1.3s ease-out;
-            -webkit-transition: all 1.3s ease-out;
-            text-align: left;
-        }
-        .fp-viewing-page2 #aboutus1,
-        .fp-viewing-page2 #aboutus2 {
-            left: 0rem;
-        }
-        #theTeam {
-            position: relative;
-            text-align: center;
-            padding-bottom: 3rem;
-            margin: 0 auto;
-        }
-        #kanban {
-            display: none;
-        }
-        .fp-viewing-page4 .wipP {
-            left: 0rem;
-        }
-        .friendsDivs {
-            padding: 0rem;
-        }
-        #popupCrono,
-        #popupLucca,
-        #popupFrog,
-        #popupMarle,
-        #popupRobo,
-        #popupMagus,
-        #popupAyla {
-            top: -35rem;
-            left: 37vw;
-            width: 50vw;
-            height: 60vh;
-        }
-        #popupCrono h1,
-        #popupLucca h1,
-        #popupRobo h1,
-        #popupMagus h1,
-        #popupAyla h1 {
-            padding-left: 1.5rem;
-            padding-top: 0.5rem;
-        }
-        #popupFrog h1 {
-            color: black;
-            padding-left: 2rem;
-        }
-        #popupMarle h1 {
-            color: black;
-        }
-        #popupAyla {
-            background-size: 200%;
-            background-position: 5%;
-        }
-        #popupLucca {
-            background-size: 300%;
-            background-position-x: -20rem;
-        }
-        .popupDesc {
-            left: 0rem;
-            right: 0rem;
-            padding: 0px;
-            padding-top: 4vh;
-            padding-left: 3vw;
-            top: 3rem;
-            position: absolute;
-            height: 0rem;
-            font-size: 0.8rem;
-        }
-        /*
-        .cancel {
-            position: absolute;
-            left: 36.4vw;
-            top: 52.3vh;
-        }
-        */
-    }
-    
-    @media screen and (min-width: 1280px) {
-        .nav-list {
-            display: block !important;
-        }
-    }
-    
-    #nav-toggle {
-        position: absolute;
-        left: 18px;
-        top: 22px;
-        cursor: pointer;
-        padding: 10px 35px 16px 0px;
-    }
-    
-    #nav-toggle span,
-    #nav-toggle span:before,
-    #nav-toggle span:after {
-        cursor: pointer;
-        border-radius: 1px;
-        height: 5px;
-        width: 35px;
-        background: #ffffff;
-        position: absolute;
-        display: block;
-        content: "";
-        transition: all 300ms ease-in-out;
-    }
-    
-    #nav-toggle span:before {
-        top: -10px;
-    }
-    
-    #nav-toggle span:after {
-        bottom: -10px;
-    }
-    
-    #nav-toggle.active span {
-        background-color: transparent;
-    }
-    
-    #nav-toggle.active span:before,
-    #nav-toggle.active span:after {
-        top: 0;
-    }
-    
-    #nav-toggle.active span:before {
-        transform: rotate(45deg);
-    }
-    
-    #nav-toggle.active span:after {
-        transform: rotate(-45deg);
-    }
-    
-    article {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 10px;
-    }
-    
-    #cronoLink {
-        z-index: 1005;
-    }
+}
+
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
+article {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#cronoLink {
+    z-index: 1005;
+}

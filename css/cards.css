@@ -317,7 +317,10 @@ body {
         margin-bottom: 0em;
     }
     .customSlider+label {
-        top: -6rem;
+        position: relative;
+        top: -5rem;
+        left: 3.75rem;
+        cursor: pointer;
     }
 }
 
