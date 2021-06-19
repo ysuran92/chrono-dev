@@ -236,12 +236,12 @@ i {
 
 #popupCrono {
     /*background: url(../assets/cronoPopupBack.jpg);*/
-    background-image: url(../assets/cronoPopupBackTest.jpg);
+    background-image: url(../assets/cronoPopupBack.jpg);
 }
 
 #popupLucca {
     /*background: url(../assets/luccaPopupBack.jpg);*/
-    background-image: url(../assets/luccaPopupBackTest.jpg);
+    background-image: url(../assets/luccaPopupBack.jpg);
 }
 
 #popupFrog {
@@ -252,7 +252,7 @@ i {
 
 #popupMarle {
     /*background: url(../assets/marlePopupBack.png);*/
-    background-image: url(../assets/marlePopupBack.png);
+    background-image: url(../assets/marlePopupBack.jpg);
 }
 
 #popupRobo {
