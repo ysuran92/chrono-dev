@@ -236,7 +236,11 @@ i {
 
 #popupCrono {
     /*background: url(../assets/cronoPopupBack.jpg);*/
-    background-image: url(../assets/cronoPopupBack.jpg);
+    /*background-image: url(../assets/cronoPopupBack.jpg);*/
+    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, -webkit-linear-gradient(left, #ba53a0, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, -o-linear-gradient(right, #ba53a0, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, -moz-linear-gradient(right, #ba53a0, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, linear-gradient(to right, #ba53a0, #fff);
 }
 
 #popupLucca {
@@ -252,7 +256,7 @@ i {
 
 #popupMarle {
     /*background: url(../assets/marlePopupBack.png);*/
-    background-image: url(../assets/marlePopupBack.jpg);
+    background-image: url(../assets/marlePopupBack.png);
 }
 
 #popupRobo {
