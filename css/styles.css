@@ -235,7 +235,8 @@ i {
 }
 
 #popupCrono {
-    background: url(../assets/cronoPopupBack.jpg);
+    /*background: url(../assets/cronoPopupBack.jpg);*/
+    background-image: url(../assets/cronoPopupBack.jpg);
 }
 
 #popupLucca {
