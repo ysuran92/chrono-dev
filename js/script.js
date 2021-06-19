@@ -1,20 +1,20 @@
 /*********************************** START NAVBAR AND HAMBURGER MENU SECTION *******************************************************/
 
-(function($) { // Begin jQuery
-    $(function() { // DOM ready
+(function ($) { // Begin jQuery
+    $(function () { // DOM ready
         // If a link has a dropdown, add sub menu toggle.
-        $('nav ul li a:not(:only-child)').click(function(e) {
+        $('nav ul li a:not(:only-child)').click(function (e) {
             $(this).siblings('.nav-dropdown').toggle();
             // Close one dropdown when selecting another
             $('.nav-dropdown').not($(this).siblings()).hide();
             e.stopPropagation();
         });
         // Toggle open and close nav styles on click
-        $('#nav-toggle').click(function() {
+        $('#nav-toggle').click(function () {
             $('nav ul').slideToggle();
         });
         // Hamburger to X toggle
-        $('#nav-toggle').on('click', function() {
+        $('#nav-toggle').on('click', function () {
             this.classList.toggle('active');
         });
     }); // end DOM ready
@@ -22,16 +22,16 @@
 
 //Close navbar when clicked outside
 if ($(window).width() < 1280) {
-    $(document).ready(function() {
-        $('#nav-toggle').mouseup(function(e) {
+    $(document).ready(function () {
+        $('#nav-toggle').mouseup(function (e) {
             e.preventDefault();
             e.stopPropagation();
             $('.nav-dropdown').toggle();
         });
-        $('.nav-list').mouseup(function(e) {
+        $('.nav-list').mouseup(function (e) {
             e.stopPropagation();
         });
-        $('body').mouseup(function() {
+        $('body').mouseup(function () {
             $('.nav-list').slideUp(400);
             $('#nav-toggle').removeClass("active");
         });
@@ -60,7 +60,7 @@ let aylaLink = document.getElementById("aylaLink");
 
 if ($(window).width() >= 1280) {
 
-    cronoLink.addEventListener("mouseup", function() {
+    cronoLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupCrono';
         message.innerHTML = ` 
@@ -77,7 +77,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    marleLink.addEventListener("mouseup", function() {
+    marleLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupMarle';
         message.innerHTML = ` 
@@ -94,7 +94,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    luccaLink.addEventListener("mouseup", function() {
+    luccaLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupLucca';
         message.innerHTML = ` 
@@ -111,7 +111,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    roboLink.addEventListener("mouseup", function() {
+    roboLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupRobo';
         message.innerHTML = ` 
@@ -128,7 +128,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    frogLink.addEventListener("mouseup", function() {
+    frogLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupFrog';
         message.innerHTML = ` 
@@ -145,7 +145,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    magusLink.addEventListener("mouseup", function() {
+    magusLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupMagus';
         message.innerHTML = ` 
@@ -162,7 +162,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    aylaLink.addEventListener("mouseup", function() {
+    aylaLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupAyla';
         message.innerHTML = ` 
@@ -181,7 +181,7 @@ if ($(window).width() >= 1280) {
 
 } else if ($(window).width() < 1280) {
 
-    cronoLink.addEventListener("mouseup", function() {
+    cronoLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupCrono';
         message.innerHTML = ` 
@@ -197,7 +197,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    luccaLink.addEventListener("mouseup", function() {
+    luccaLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupLucca';
         message.innerHTML = ` 
@@ -213,7 +213,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    frogLink.addEventListener("mouseup", function() {
+    frogLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupFrog';
         message.innerHTML = ` 
@@ -229,7 +229,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    marleLink.addEventListener("mouseup", function() {
+    marleLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupMarle';
         message.innerHTML = ` 
@@ -245,7 +245,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    roboLink.addEventListener("mouseup", function() {
+    roboLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupRobo';
         message.innerHTML = ` 
@@ -261,7 +261,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    magusLink.addEventListener("mouseup", function() {
+    magusLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupMagus';
         message.innerHTML = ` 
@@ -277,7 +277,7 @@ if ($(window).width() >= 1280) {
         appendAny();
     });
 
-    aylaLink.addEventListener("mouseup", function() {
+    aylaLink.addEventListener("mouseup", function () {
         popup.className = 'popupClass';
         popup.id = 'popupAyla';
         message.innerHTML = ` 
@@ -293,23 +293,29 @@ if ($(window).width() >= 1280) {
 };
 
 // Close popup when clicked outside
-$(document).ready(function() {
-    $('.link').click(function(e) {
+$(document).ready(function () {
+    $('.link').click(function (e) {
         e.preventDefault();
         e.stopPropagation();
         $('.popupClass').toggle();
     });
-    $('.popupClass').mouseup(function(e) {
+    $('.popupClass').mouseup(function (e) {
         e.stopPropagation();
     });
-    $('body').mouseup(function() {
+    $('body').mouseup(function () {
         $('.popupClass').hide();
     });
 });
 
 /********************************************** END POPUPS FUNCTIONS SECTION ************************************************************/
 
-// Animate On Scroll (AOS)
-if ($(window).width() < 1280) {
-    $('.aboutUsP').attr('data-aos', 'zoom-in');
+$(window).load(
+    function () {
+        preload(['fonts/ChronoType.tff'], ['assets/frogPopupBack.jpg'])
+    });
+
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function () {
+        $('<img />').attr('src', this).appendTo('body').css('display', 'none');
+    });
 }
