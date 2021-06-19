@@ -251,7 +251,6 @@ i {
     background: url(../assets/luccaPopupBack.jpg) no-repeat, -moz-linear-gradient(right, #000, #fff);
     background: url(../assets/luccaPopupBack.jpg) no-repeat, linear-gradient(to right, #000, #fff);
 }
-}
 
 #popupFrog {
     /*background: url(../assets/frogPopupBack.jpg);*/
