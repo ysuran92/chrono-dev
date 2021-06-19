@@ -237,15 +237,20 @@ i {
 #popupCrono {
     /*background: url(../assets/cronoPopupBack.jpg);*/
     /*background-image: url(../assets/cronoPopupBack.jpg);*/
-    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, -webkit-linear-gradient(left, #ba53a0, #fff);
-    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, -o-linear-gradient(right, #ba53a0, #fff);
-    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, -moz-linear-gradient(right, #ba53a0, #fff);
-    background: url(../assets/cronoPopupBack.jpg) no-repeat right top fixed, linear-gradient(to right, #ba53a0, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat, -webkit-linear-gradient(left, #000, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat, -o-linear-gradient(right, #000, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat, -moz-linear-gradient(right, #000, #fff);
+    background: url(../assets/cronoPopupBack.jpg) no-repeat, linear-gradient(to right, #000, #fff);
 }
 
 #popupLucca {
     /*background: url(../assets/luccaPopupBack.jpg);*/
-    background-image: url(../assets/luccaPopupBack.jpg);
+    /*background-image: url(../assets/luccaPopupBack.jpg);*/
+    background: url(../assets/luccaPopupBack.jpg) no-repeat, -webkit-linear-gradient(left, #000, #fff);
+    background: url(../assets/luccaPopupBack.jpg) no-repeat, -o-linear-gradient(right, #000, #fff);
+    background: url(../assets/luccaPopupBack.jpg) no-repeat, -moz-linear-gradient(right, #000, #fff);
+    background: url(../assets/luccaPopupBack.jpg) no-repeat, linear-gradient(to right, #000, #fff);
+}
 }
 
 #popupFrog {
