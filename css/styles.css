@@ -235,40 +235,33 @@ i {
 }
 
 #popupCrono {
-    /*background: url(../assets/cronoPopupBack.jpg);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/cronoPopupBack.jpg);
 }
 
 #popupLucca {
-    /*background: url(../assets/luccaPopupBack.jpg);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/luccaPopupBack.jpg);
 }
 
 #popupFrog {
-    /*background: url(../assets/frogPopupBack.jpg);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/frogPopupBack.jpg);
     color: rgb(230, 230, 230);
 }
 
 #popupMarle {
-    /*background: url(../assets/marlePopupBack.png);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/marlePopupBack.jpg);
 }
 
 #popupRobo {
-    /*background: url(../assets/roboPopupBack.jpg);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/roboPopupBack.jpg);
     color: rgb(230, 230, 230);
 }
 
 #popupMagus {
-    /*background: url(../assets/magusPopupBack.jpg);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/magusPopupBack.jpg);
     color: rgb(230, 230, 230);
 }
 
 #popupAyla {
-    /*background: url(../assets/aylaPopupBack.jpg);*/
     background-image: url(https://ysuran92.sirv.com/chrono-dev/aylaPopupBack.jpg);
     color: rgb(230, 230, 230);
 }
