@@ -198,7 +198,7 @@ i {
 }
 
 #kanban {
-    width: 30%;
+    width: 50%;
     position: relative;
     left: -100rem;
     transition: all 1s ease-out;

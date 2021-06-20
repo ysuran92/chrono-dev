@@ -263,7 +263,7 @@ body {
     transform: translate(0%, -900%);
 }
 
-@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+@media only screen and (min-width: 1301px) and (max-width: 1366px) {
     .wrapper {
         margin-top: -30vh;
         width: 25vw;
@@ -334,35 +334,43 @@ body {
         cursor: pointer;
     }
 }
+/*
+@media only screen and (min-width: 1281px) and (max-width: 1300px) {
 
+}
+*/
 @media only screen and (max-width: 1280px) {
     .customSlider+label {
-        top: -4rem;
-        left: 3.5rem;
+        position: fixed;
+        top: 0rem;
+        left: 4.4rem;
+        margin-top: -8.6rem;
+        margin-bottom: 0rem;
+        padding: 0%;
     }
     .space2 {
         height: 10vh;
     }
     .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: -15vh;
-        width: 40vw;
-        height: 75vh;
+        /*display: flex;
+        flex-wrap: wrap;*/
+        margin-top: -20vh;
+        width: 36.8vw;
+        height: 55vh;
     }
     .wrapper .profile .thumbnail {
-        width: 5rem;
-        height: 5rem;
+        width: 7rem;
+        height: 7rem;
     }
     .wrapper .profile .name {
         color: #2D354A;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 600;
         text-align: center;
     }
     .wrapper .profile .title {
         color: #7C8097;
-        font-size: 0.50em;
+        font-size: 0.75em;
         font-weight: 300;
         text-align: center;
         padding-top: 0.5em;
@@ -372,31 +380,34 @@ body {
     }
     .wrapper .profile .description {
         color: #080911;
-        font-size: 10px;
+        font-size: 12.5px;
         font-weight: 300;
         text-align: center;
         margin-bottom: 1.3em;
     }
     .wrapper .profile .btn {
-        width: 80px;
+        width: 100px;
         height: 28px;
-        font-size: 12px;
-        margin-bottom: 0em;
+        font-size: 14px;
+        margin-bottom: 2em;
+        margin-top: 2em;
         padding-bottom: 0em;
+        line-height: 0px;
     }
     .cardONE,
     .cardTWO {
         display: flexbox;
         flex-direction: column;
         position: fixed;
+        width: 5vw;
     }
     .cardONE {
         margin-right: 3vw;
         margin-left: -5vw;
-        transform: translate(0%, -750%);
+        transform: translate(2vw, -750%);
     }
     .cardTWO {
-        transform: translate(50%, -750%);
+        transform: translate(45vw, -750%);
     }
     .wrapper .social-icons {
         display: flex;
@@ -410,12 +421,14 @@ body {
         flex-direction: column;
         width: 10px;
         height: 10px;
-        padding: 0px 20px;
+        padding: 0px 32px;
+        margin-top: 1.5rem;
     }
     .wrapper .social-icons .icon a {
-        width: 35px;
-        height: 35px;
-        line-height: 20px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 30px;
     }
     .wrapper .social-icons .icon h4 {
         font-size: 0em;
