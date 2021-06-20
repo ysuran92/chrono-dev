@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -25,7 +24,8 @@ body {
 .customSlider+label {
     position: relative;
     top: 3rem;
-    left: -6.35rem;
+    /*left: -6.35rem;*/
+    left: -21.15rem;
     cursor: pointer;
 }
 
@@ -95,6 +95,7 @@ body {
 }
 
 .wrapper {
+    position: fixed;
     width: 320px;
     height: 560px;
     background: #FDFEFF;
@@ -253,7 +254,13 @@ body {
 }
 
 .cardTWO {
-    transform: translate(150%);
+    /*transform: translate(66.66%, -75%);*/
+    transform: translate(66.66%, -1000%);
+}
+
+.cardONE {
+    /*transform: translate(0%, 25%);*/
+    transform: translate(0%, -900%);
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1366px) {
