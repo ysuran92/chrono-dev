@@ -265,9 +265,9 @@ body {
 
 @media only screen and (min-width: 1281px) and (max-width: 1366px) {
     .wrapper {
-        margin-top: -20vh;
-        width: 20vw;
-        height: 75vh;
+        margin-top: -30vh;
+        width: 25vw;
+        height: 55vh;
     }
     .wrapper .profile .thumbnail {
         width: 7.5rem;
@@ -281,7 +281,7 @@ body {
     }
     .wrapper .profile .description {
         font-size: 14px;
-        margin-bottom: 1.3em;
+        margin-bottom: 1.5em;
     }
     .wrapper .profile .btn {
         text-align: center;
@@ -291,16 +291,19 @@ body {
     }
     .cardONE,
     .cardTWO {
-        transform: translate(50%, 25%);
         display: flex;
         flex-direction: row;
     }
     .cardONE {
+        transform: translate(6.66%, 0%);
         margin-right: 3vw;
         margin-left: -5vw;
     }
     .cardTWO {
-        transform: translate(200%, 25%);
+        transform: translate(66.66%, 25%);
+    }
+    .devI {
+        font-size: 2.75rem;
     }
     .wrapper .social-icons {
         display: flex;
@@ -310,13 +313,14 @@ body {
     }
     .wrapper .social-icons .icon {
         text-align: center;
-        width: 3rem;
-        height: 3rem;
+        width: 100px;
+        height: 100px;
     }
     .wrapper .social-icons .icon a {
-        width: 3rem;
-        height: 3rem;
-        line-height: 20px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        margin-top: 12px;
     }
     .wrapper .social-icons .icon h4 {
         font-size: 1rem;
@@ -325,7 +329,7 @@ body {
     }
     .customSlider+label {
         position: relative;
-        top: -5rem;
+        top: -14.25rem;
         left: 3.75rem;
         cursor: pointer;
     }
@@ -382,13 +386,17 @@ body {
     }
     .cardONE,
     .cardTWO {
-        transform: translate(25%, 25%);
-        display: flex;
-        flex-direction: row;
+        display: flexbox;
+        flex-direction: column;
+        position: fixed;
     }
     .cardONE {
         margin-right: 3vw;
         margin-left: -5vw;
+        transform: translate(0%, -750%);
+    }
+    .cardTWO {
+        transform: translate(50%, -750%);
     }
     .wrapper .social-icons {
         display: flex;
