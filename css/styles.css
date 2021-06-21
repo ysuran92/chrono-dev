@@ -243,8 +243,7 @@ i {
 }
 
 #popupFrog {
-    /*background-image: url(https://ysuran92.sirv.com/chrono-dev/frogPopupBack.jpg);*/
-    background-image: url(../assets/frogPopupBack.jpg);
+    background-image: url(https://ysuran92.sirv.com/chrono-dev/frogPopupBack.jpg);
     color: rgb(230, 230, 230);
 }
 
